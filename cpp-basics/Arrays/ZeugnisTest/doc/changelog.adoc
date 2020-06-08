@@ -1,10 +1,17 @@
-= API
+= API Changelog
 
-.Header
+.Changelog
+|===
+
+|  v0.0.1
+a|
+.Define API (v0.0.1)
 ----
 namespace Zeugnis {
 
-    int berechneDurchschnitt(int noten[], int notenAnzahl);
+    int berechneDurchschnitt(int noten[], int notenAnzahl)
 
 }
 ----
+
+|===

@@ -1,4 +1,4 @@
-= ZAPI
+= Zeugnis API
 
 .Die Deklaration ist eine kurz Fassung der Definition (ohne Methodenrumpf).
 ----
