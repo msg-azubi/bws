@@ -11,3 +11,7 @@ HEADERS += \
 
 SOURCES += \
         main.cpp
+
+DISTFILES += \
+    doc/api-4-Zeugnis.adoc \
+    doc/changelog.adoc

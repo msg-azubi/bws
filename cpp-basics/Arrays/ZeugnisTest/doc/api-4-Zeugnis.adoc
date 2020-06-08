@@ -1,0 +1,10 @@
+= ZAPI
+
+.Die Deklaration ist eine kurz Fassung der Definition (ohne Methodenrumpf).
+----
+namespace Zeugnis {
+
+    int berechneDurchschnitt(int noten[], int notenAnzahl);
+
+}
+----

@@ -1,0 +1,10 @@
+= API
+
+.Header
+----
+namespace Zeugnis {
+
+    int berechneDurchschnitt(int noten[], int notenAnzahl);
+
+}
+----
