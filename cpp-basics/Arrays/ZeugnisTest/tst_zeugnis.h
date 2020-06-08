@@ -2,6 +2,9 @@
 namespace Zeugnis {
 
     int berechneDurchschnitt(int noten[], int notenAnzahl){
+        // C++ Passing Arrays to Functions
+        // https://www.tutorialspoint.com/cplusplus/cpp_passing_arrays_to_functions.htm
+
         int result = 0;
 
         for (int i = 0; i < notenAnzahl; i++ ){
