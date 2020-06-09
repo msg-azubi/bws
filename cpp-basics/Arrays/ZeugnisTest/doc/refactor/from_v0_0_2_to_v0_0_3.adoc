@@ -1,0 +1,110 @@
+= Refactorings
+
+== Refactoring Planung für v0.0.3
+
+Refactoring Ziel::
+Die Funktion soll nur einen Parameter übernehmen
+
+.gewünschte Signatur für die API.
+----
+Zeugnis::berechneDurchschnitt(noten);
+----
+
+Situation:::
+Die Übergabe der Noten als Array, erzwingt eine Signaturänderung,
+weil ein übergebener Array als Pointer übergeben wird.
++
+Ein Pointer ist lediglich eine Speicheradresse.
+Es wird kein Information übergeben,
+wieviele Elemente der Array enthält.
+
+Lösungweg:::
+Welche andere Möglichkeiten gibt es,
+um die Noten Information an `berechneDurchschnitt`
+zu übergeben?
+
+Lösung:::
+Die Benutzung eines Standard Containers gemäß den CppCoreGuidelines
+statt eines C Arrays:::
+Die Container haben eine öffentliche Funktion,
+die die Anzahl der Elemente liefert `size()`.
+Seit dem  C++98-Standard die Container Teil des modernen {cpp}.
+Das Konzept der Container stammen aus einer Library
+namens _Standard Template Library_ , kurz _STL_.
+(siehe dazu: https://de.wikipedia.org/wiki/Standard_Template_Library[Standard Template Library @ de.wikipedia.org] )
+
++
+Diese Refactoring berücksichtigt, die folgenden CppCoreGuidelines
+
+* link:http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#slcon1-prefer-using-stl-array-or-vector-instead-of-a-c-array[Prefer using STL array or vector instead of a C array]
++
+Mehr dazu z. B. im Artikel
+link:https://www.heise.de/developer/artikel/C-Core-Guidelines-std-array-und-std-vector-sind-die-erste-Wahl-4431985.html[C++ Core Guidelines: std::array und std::vector sind die erste Wahl]
+von Rainer Grimm.
+
+* Wie im Artikel vorgeschlagen, folgen wir einer weiteren Regel der CppCoreGuidelines
+link:http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#slcon2-prefer-using-stl-vector-by-default-unless-you-have-a-reason-to-use-a-different-container[Prefer using STL vector by default unless you have a reason to use a different container]
++
+Die Container `std::array` und `std::vector` sind beide sehr performant.
+Den Unterschied zwischen beiden, fasst die folgende Aussage gut zusammen:
++
+.What is the difference between array and vector? The differences is the organization of memory
+[quote, 'link:https://www.quora.com/What-is-the-difference-between-an-array-and-a-vector[blog @ quora.com]']
+____
+Array implements a compile-time non-resizeable array.
+
+Vector implements an array with fast random access
+and an ability to automatically resize
+when appending elements.
+____
+
++
+Deutschsprachige Nutzungbeispiele eines `std::vector`
+
+* link:https://de.cppreference.com/w/cpp/container/vector/size[de.cppreference.com].
+* Das Kapitel
+  link:http://www.purl.org/stefan_ram/pub/c++_statische_vektoren_de[Vektoren]
+  des Kurses
+  link:http://www.purl.org/stefan_ram/pub/c++-kurs[Das Programmieren mit der Programmiersprache C++ – Die absoluten Grundlagen]
++
+Das Kapitel ist die Lektion 29.18 des Kurses mit dem Titel  _Dynamische Reihungen (Vektoren) in C++_
++
+[quote]
+____
+Objekte eines Typs einer Anwendung der Schablone `::std::vector` werden auch Vektoren genannt.
+Die einzelnen Objekt in einem Vektor nennen wir auch die Komponenten des Vektors.
+
+Ein Vektor kann ähnlich wie eine Zeichenfolge `:std::basic_string` verwendet werden.
+Zwei wichtige Unterschiede sind jedoch:
+
+* Der Vektor kann nicht mit `( ::std::cout << p )`  als Ganzes ausgegeben werden.
++
+Die Komponent eines Vektors können ausgegeben werden:
+----
+::std::cout << "   " << v.at( 0 )<< ::std::endln;
+----
+* Während die Schablone `::std::basic_string` für die Anwendung auf Typen gedacht ist,
+  die Schriftzeichen vom Typ `char` darstellen,
+  kann ein Vektor Objekte fast beliebiger Typen enthalten.
+____
+
+.Was ist der Unterschied zwischen `::std::basic_string` und `::std::string`? Und warum werden sie beide gebraucht?
+****
+* `std::basic_string` ist eine Schablone (_engl._ class template),
+um Zeichenfolgen (_engl._ strings) für den Typ `char` zu erstellen.
+
+Unicode Zeichenfolgen können nicht als Zeichenfolgen von Typ `char` implementiert werden,
+dafür ist eine Zeichenfolgen vom sogenannten _wide characters_ nötig.
+
+Wenn also Zeichenfolgen gebraucht werden, die nicht von Typ `char` sind,
+wird die Schablone `::std::basic_string`.
+
+Das Merkmal einer Schablone ist,
+dass ihnen Typinformation mitgegeben wird, die den Typ ihres Inhaltes beschreibt.
+
+.Ein Zeichenfolge, deren Elemente nicht von Typ `char` sind, sondern vom Typ `wchar_t`. Mit dieser Zeichenfolge können Unicode-Strings implementiert werden.
+----
+std::basic_string<wchar_t>
+----
+**** 
+

@@ -1,6 +1,6 @@
 = Zeugnis API
 
-.Die Deklaration ist eine kurz Fassung der Definition (ohne Methodenrumpf).
+.Diese Deklaration ist eine kurz Fassung der Definition (ohne Methodenrumpf) der API mit dem Tag v0.0.2
 ----
 namespace Zeugnis {
 
