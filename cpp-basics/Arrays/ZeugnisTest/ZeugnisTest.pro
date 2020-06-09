@@ -15,4 +15,4 @@ SOURCES += \
 DISTFILES += \
     doc/api-4-Zeugnis.adoc \
     doc/changelog.adoc \
-    doc/refactorings/refactor_from_v0_0_2_to_v0_0_3.adoc
+    doc/refactor/from_v0_0_2_to_v0_0_3.adoc
