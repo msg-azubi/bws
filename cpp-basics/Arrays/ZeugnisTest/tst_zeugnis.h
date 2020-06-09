@@ -4,8 +4,6 @@
 namespace Zeugnis {
 
     int berechneDurchschnitt(std::array<int, 4> noten){
-        // C++ Passing Arrays to Functions
-        // https://www.tutorialspoint.com/cplusplus/cpp_passing_arrays_to_functions.htm
 
         int result = 0;
 
