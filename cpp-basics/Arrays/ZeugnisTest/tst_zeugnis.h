@@ -1,9 +1,9 @@
 #ifndef DEFINE_API_FUER_TST_ZEUGNIS_H
-#include<array>
+#include<vector>
 
 namespace Zeugnis {
 
-    int berechneDurchschnitt(std::array<int, 4> noten){
+    int berechneDurchschnitt(std::vector<int> noten){
 
         int result = 0;
 
@@ -29,8 +29,10 @@ using namespace testing;
 
 TEST(ArrayExample, ZeugnisDurchschnitt_ist_glatte_Note)
 {
-    // Diese Noten von 4 Fächern
-    std::array<int, 4> noten { 2, 2, 4, 4 };
+    // Die Noten von 4 Fächern als Vektor
+    // Allgemein Infos zu Vektoren auf deutsch
+    // * http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/c++_statische_vektoren_de
+    std::vector<int> noten { 2, 2, 4, 4 };
 
     // haben einen Durchschnitt
     int erwarteterDurchschnitt = 3;
