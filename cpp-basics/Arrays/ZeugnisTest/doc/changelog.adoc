@@ -3,13 +3,52 @@
 .Changelog
 |===
 
-|  v0.0.1
+
+
+|  v0.0.2
 a|
-.Define API (v0.0.1)
+
+Implementierung der API::
+Die Implementierung mit der Übergabe der Noten als int-Array,
+hat eine Veränderung der API erzwungen.
++
+Hintergrund:::
+link:https://www.tutorialspoint.com/cplusplus/cpp_passing_arrays_to_functions.htm[In {cpp} wird ein Array an eine Funktion übergeben als Pointer auf die Array-Addresse].
+Auswirkungen:::
+Der Pointer auf die Addresse eines Arrays liefert keine Information,
+wieviele Elemente der Array enthält. Daher sehen wir uns gezwungen,
+diese Information an die Methode zu übergeben.
++
+.Die Signatur lautet jetzt
+----
+berechneDurchschnitt(int noten[], int notenAnzahl)
+----
++
+.Die ursprünglich geplante Signature aus der testgetriebenen Entwicklung.
+----
+berechneDurchschnitt(int noten[])
+---
+
+.Define API (v0.0.2)
 ----
 namespace Zeugnis {
 
     int berechneDurchschnitt(int noten[], int notenAnzahl)
+
+}
+----
+
+
+
+|  v0.0.1
+a|
+Design der API über Test::
+
+.Define API (v0.0.1)
+----
+namespace Zeugnis {
+
+    int berechneDurchschnitt(int noten[])
 
 }
 ----
