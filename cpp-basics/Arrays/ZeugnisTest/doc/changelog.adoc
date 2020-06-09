@@ -3,6 +3,12 @@
 .Changelog
 |===
 
+| v0.0.2-refactor-step-01
+| refactor _C-array_ to `std::array<T,N>
+git
+|  v0.0.2-refactor-hints
+a|  Die Datei   `doc/refactor/from_v0.0.2_to_v0.0.3.adoc`
+   beschreibt das Ziel eines Refactorings
 
 
 |  v0.0.2
