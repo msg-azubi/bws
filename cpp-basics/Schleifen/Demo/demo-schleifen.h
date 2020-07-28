@@ -3,5 +3,6 @@
 
 #include <iostream>
 void copy_array();
+void traditional_size();
 
 #endif // DEMOSCHLEIFEN_H
