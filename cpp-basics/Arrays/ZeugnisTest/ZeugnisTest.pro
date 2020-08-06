@@ -8,6 +8,7 @@ CONFIG += thread
 CONFIG -= qt
 
 HEADERS += \
+        namespace-bws.h \
         tst_zeugnis.h
 
 SOURCES += \
