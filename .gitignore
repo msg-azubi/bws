@@ -1,0 +1,2 @@
+# ignore *.pro.user Dateien, auch in Unterverzeichnissen
+**/*.pro.user
