@@ -222,7 +222,7 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget_AlgoBtns">
     <property name="geometry">
      <rect>
       <x>680</x>
@@ -231,7 +231,7 @@
       <height>391</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_AlgoBtns">
      <item>
       <widget class="QPushButton" name="btnBubbleSort">
        <property name="text">
@@ -276,7 +276,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget_Anzahl">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -300,7 +300,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -309,7 +309,7 @@
       <height>361</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_ALgoTimerLabels">
      <item>
       <widget class="QLabel" name="lblTimeBubbleSort">
        <property name="text">
@@ -321,7 +321,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="lblBubbleSortOptm">
+      <widget class="QLabel" name="lblTimeBubbleSortOptm">
        <property name="text">
         <string>1234567 ms</string>
        </property>
@@ -331,7 +331,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="lblSelectionSort">
+      <widget class="QLabel" name="lblTimeSelectionSort">
        <property name="text">
         <string>1234567 ms</string>
        </property>
@@ -341,7 +341,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="lblInsertSort">
+      <widget class="QLabel" name="lblTimeInsertSort">
        <property name="text">
         <string>1234567 ms</string>
        </property>
@@ -351,7 +351,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="lblQuickSortGruening">
+      <widget class="QLabel" name="lblTimeQuickSortGruening">
        <property name="text">
         <string>1234567 ms</string>
        </property>
@@ -361,7 +361,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="lblQuickSort">
+      <widget class="QLabel" name="lblTimeQuickSort">
        <property name="text">
         <string>1234567 ms</string>
        </property>
@@ -379,7 +379,7 @@
      <x>0</x>
      <y>0</y>
      <width>1120</width>
-     <height>34</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

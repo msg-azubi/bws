@@ -16,6 +16,7 @@ public:
     ~FrmMain();
 
     void on_btnBubbleSort_clicked();
+    void resetTimerLabels();
 
 private:
     Ui::MainWindow *ui;
