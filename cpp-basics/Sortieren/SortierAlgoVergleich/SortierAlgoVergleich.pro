@@ -17,13 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    frmmain.cpp \
+    sortieralgo.cpp
 
 HEADERS += \
-    mainwindow.h
+    frmmain.h \
+    sortieralgo.h
 
 FORMS += \
-    mainwindow.ui
+    frmmain.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
