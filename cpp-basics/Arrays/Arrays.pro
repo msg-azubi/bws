@@ -1,4 +1,4 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    ZeugnisTest
+    Arrays-Sortieralgorithmen
