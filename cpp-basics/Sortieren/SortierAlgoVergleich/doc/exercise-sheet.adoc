@@ -1,0 +1,136 @@
+.Übungsblatt zu Thema Sortieralgorithmen
+****
+INFORMATION::
+Dieses Übungsblatt besteht aus zwei Aufgaben. Die Aufgabe 1 liefert einen Teil Rüstzeug für die Aufgabe 2.
++
+Mit anderen Worten: Die Aufgabe 1 vermittelt einen Teil des Wissens und Könnens,
+das Voraussetzung ist, um die Aufgabe 2 gut zu bearbeiten.
+
+Wortschatz:::
+Merke dir folgenden Begriff
+Rüstzeug::::
+Der Begriff _Rüstzeug_ wird zum Beispiel auf link:https://de.thefreedictionary.com/rüstzeug[de.thefreedictionary.com]
+gut erläutert.
+
+
+
+****
+
+Aufgabe 1 (Kat. B): ::
+[loweralpha]
+. Finden Sie alle Fehler im Code mit Nennung der Zeilennummer und Fehlerart und
+machen Sie  einen Korrekturvorschlag.
++
+[IMPORTANT]
+====
+Das Rüstzeug für diese Aufgabe ist: _Die Fehlerarten von Software zu kennen_.
+
+Nenne fünf Fehlerarten:::
+
+Fünf Fehlerarten werden  zum Beispiel auf
+link:https://de.wikipedia.org/wiki/Programmfehler#Klassifizierung_von_Fehlern[de.wikipedia.org]
+genannt.
++
+// Lexikalische Fehler (unbekannter Bezug),
+// syntaktische Fehler (vergessenes Semikolon),
+// semantische Fehler (falsche Deklaration),
+// Laufzeitfehler (falsch formatierte Eingabedaten) und
+// logische Fehler (plus statt minus, Schleifenfehler, …)
++
+Eine etwas andere Liste von Fehlerarten wird
+im  Kapitel _Finden und Vermeiden von Software-Fehlern_
+der Vorlesung _Einführung in die Informatik (TU Freiberg, WS 2087/08)
+gegeben (siehe link:www.informatik.tu-freiberg.de/lehre/pflicht/EinInf/ws07/Informatik17-Softwarefehler.pdf[Vorlesungsfolien]).
++
+// Syntax-Fehler::
+// Verstoß gegen grammatikalische Regel der Programmiersprache.
+// Programm wird nicht ausgeführt.
+// Laufzeitfehler
+// z.B. Absturz des Programms bei unerwarteten Eingaben
+// z.B. nicht vorhergesehene Endlosschleifen
+// Logische Fehler
+// falscher Problemlösungsansatz oder
+// der Algorithmus ist nicht korrekt
+// Designfehler
+// Fehler bei Anforderungsdefinition
+// beruhend auf Missverständnissen zw. Anwender und Nutzer
+// Bedienfehler
+// unübersichtliches Bedienungskonzept
+
+
+Hier sind Code-Ausschnitte gezeigt. Welche Fehlerarten erwartest du zu finden?
+====
+
+. Zeichnen Sie ein UML-Anwendungsfalldiagramm, oft auch als Use Case Diagramm bezeichnet.
+
+. Setzen Sie den Code in ein Qt-Projekt um.
++
+.Überlegungen zur Aufgabe 1
+****
+* Es ist zu erwarten, dass zwei Fehlerarten im Code zu finden sind: Syntax-Fehler und logische Fehler.
+** Syntax-Fehler zeigt, die IDE
+** Logische Fehler sind schwieriger zu finden.
+
+//
+Vorgehen: Lese den Code
+
+* Die Zeile 1 deklariert einen neuen Typ `datentyp`,
+  Zeile 3 nutzt den neuen Datentyp, um eine Variable, `origArray`, zu deklarieren.
++
+Welche Typ hat die deklarierte Variable?::
+Allgemeine Rüstzeug zu Typen in {cpp} liefert diese Datei:
++
+----
+./skills/cpp/the-basics--the-declarator-operators.de-de.adoc
+----
+
+
+
++
+Zusatzfragen::
+Angenommen `origArray` sollte statt eines `int`-Arrays ein `double`-Array sein, wo wären bei diesen Code-Ausschnitten
+Änderungen nötig?
+
+* In Zeile 5 starte die Definition einer .................
+  die in Zeile 12 endet.
++
+Was wird hier deklariert eine Funktion oder eine Methode?
+Worin liegt der Unterschied?
++
+Welche Parameter werden übergeben?::
+
+Beschreibe die Aufgabe der Funktion mit einem Satz::
+Versuche allein durch Lesen der Deklaration,
+also der Kopfzeile der Definition zu erfassen,
+was die Aufgabe der Funktion ist.
+
+Lese die Definition::
+Spiele dabei mit der link:https://doc.qt.io/qt-5/[Qt Documentation]
+
+
+link:https://doc.qt.io/qt-5/qlistwidget.html[QListWidget]::
+
+suche auf dieser Seite nach `addItem`:::
+Erläutere was in der Schleife passiert.
+
+Zusatzaufgaben:::
++
+----
+skills/qt-excercise/intro--signals-and-slots.adoc
+----
++
+----
+skills/qt-excercise/QListWidget--clear-and-setVisible.adoc
+----
+
+Beschreibe mit eigenen Worten auf Aufgabe die `arrayAnzeigen`:::
+
+
+
+Welche Fehlerart wird in den Zeilen 5 bis 12 gefunden?::
+Hinweise ergeben sich über
++
+----
+./skills/in-general/quote--why-numbering-should-start-at-zero.de-de.adoc
+----
+

@@ -1,0 +1,15 @@
+.Spielerische Übung
+****
+https://doc.qt.io/qt-5/signalsandslots.html[Signal & Slot]::::
+Empfohlene Übung zum "`Überfliegen einer Dokumentation":
++
+Folge dem Link zur Seite _Signal & Slot_.
+Die ersten vier Abschnitte
+( _Signal & Slot_, _Introduction_, _Signals_ und _Slots_)
+bestehen aus mehreren Absätzen (_engl._ paragraph).
+Kette jeweils nur den ersten Satz aneinander;
+am einfachsten durch Copy&Paste.
++
+Versuche diese aneinandergereihten Sätze frei ins Deutsche
+zu übersetzen, so dass du ein Grundverständnis für _Signals&Slots_ hast.
+****

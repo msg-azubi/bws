@@ -1,0 +1,104 @@
+.Warum Aufzählen von Elementen bei null starten sollte
+[quote, 'Freie Übersetzung von "`Why numbering should start at zero`" ' ,  'link:http://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF[Edsger W. Dykstra (1982)]']
+____
+Um eine Teilaufzählung der natürlichen Zahlen, wie
+\$ 2, 3, \cdots, 12 \$
+ohne die lästigen drei Punkte zu schreiben,
+sind vier mathematische Schreibweise denkbar:
+
+[loweralpha]
+[[convention-a-to-denote-ssequence-of-natural-numbers]]
+. \$ 2 \leq  i <    13\$
+. \$ 1 <    i  \leq 12\$
+. \$ 2 \leq  i \leq 12\$
+. \$ 1 <  i < 13\$
+
+Gibt es Gründe einer der Schreibweisen zu bevorzugen?
+Die gibt es, hier sind sie:
+
+Unsere obige Teilaufzählung hat 11 einzelne Elemente.
+Die Schreibweisen (a) und (b) haben den Vorteil,
+dass wenn man die Differenz aus der oberen und der unteren Grenze bildet
+jeweils richtige Anzahl für die Element erhält:
+
+.Die Differenz aus der oberen und der unteren Grenze für die vier Schreibweisen
+[loweralpha]
+. \$ 13 - 2 = 11\$
+. \$ 12 - 1 = 11\$
+. \$ 12 - 2 = 10\$
+. \$ 13 - 1 = 12\$
+
+Desweiteren haben die Schreibenweisen (a) und (b)
+die Eigenschaft, dass sich direkt anschließende Teilsequenzen leicht erkennen lassen:
+Wenn die oberen Grenze der einen und die untere Grenze der anderen
+denselben Wert haben, schließen die beiden Teilsequenzen sich direkt an.
+
+.Zwei Teilsequenzen, die direkt aneinanderanschließen ausgedrückt in den vier Schreibweisen.
+[loweralpha]
+[[convention-a-to-denote-ssequence-of-natural-numbers]]
+. \$ 2 \leq  i <    13\$ und \$ 13 \leq  i <    20\$
+. \$ 1 <    i  \leq 12\$ und \$ 12 <    i  \leq 19\$
+. \$ 2 \leq  i \leq 12\$ und \$ 13 \leq  i \leq 19\$
+. \$ 1 <  i < 13\$ und \$ 12 <  i < 20\$
+
+Auch diese Beobachtung, die eine Konsequenz der ersten ist,
+spricht nochmals dafür die Schreibweisen (a) und (b) zu bevorzugen.
+Doch welche der beiden Schreibweisen ist zu bevorzugen?
+Dazu müssen wir von neuem nach Kriterien suchen.
+
+In den Schreibweisen (b) und (d) gehört die benannte untere Grenze
+nicht zu den aufgezählten Werten. Damit ist es mit diese Schreibweisen
+nicht möglich eine Aufzählung zu beschreiben,
+die mit der kleinsten natürlichen Zahl beginnt
+ohne in der Schreibweise auch auf eine nicht natürlich Zahl zu verwenden.
+Denn in den Schreibweisen (b) und (d) müssten zum Beispiel eine Aufzählung
+für \$ 0, 1, \cdots, 4 \$ lauten:
+\$ -1 <  i  \leq 4\$ bzw.
+\$ -1 <  i < 5\$,
+wobei mit \$-1\$ eine nicht natürliche Zahl zu verwenden wäre.
+Das ist nicht sinnvoll, weshalb eine Schreibweise bevorzugt wird,
+die die untere Grenze in den Wertbereich mit hineinnimmt,
+wie dies in den Schreibweisen  (a) and (c)  durch  \$\leq\$ geschieht.
+
+In ähnlicher Weise kann man auch den Spezialfall diskutieren,
+dass die Beschreibung der Aufzählung eine leere Aufzählung widerspiegeln soll.
+Dabei zeigt sich, dass wenn die obere Grenze mit eingeschlossen wird,
+wie bei (b) und (c), müssen wir auf unnatürliche Zahlen zurückgreifen für die obere Grenze.
+
+.Würde die obere Grenze miteinbezogen, wie bei (b) und (c), müssen wir auf unnatürliche Zahlen zurückgreifen.
+[loweralpha]
+[[convention-a-to-denote-ssequence-of-natural-numbers]]
+. \$ 0 \leq  i <    0\$
+. \$ -1 <    i  \leq -1\$
+. \$ 0 \leq  i \leq -1\$
+. \$ -1 <  i < 0\$
+
+Daher wird die obere Grenze so gewählt,
+dass sie nicht zum Wertbereich der Aufzählung zählt.
+Für die obere Grenze bevorzugen wir also \$<\$
+wie in (a) and (d).
+
+Alle Beobachtungen zusammengefasst
+ist (a) die bevorzugte Schreibweise:
+
+.Die bevorzugte Schreibweise für eine Aufzählung:
+\[ \text{untere Grenze} \leq i  < \text{obere Grenze}\]
+
+
+Oft begegnen uns Sequenz mit einer Länge \$N\$.
+Unsere Schreibeweise (a) erlaubt zwei naheliegende Wertebereich
+für die Laufvariable der Sequenz:
+Die Laufvariable startet bei eins
+\$ 1 \leq  i < N + 1\$ oder
+die Laufvariable startet bei null
+\$ 0 \leq  i < N\$.
+
+Die letzter Schreibweise ist zu bevorzugen, \$ 0 \leq  i < N\$.
+Dass heißt, die Laufvariable startet bei der unteren Grenze null und
+durch läuft alle Zahlen unterhalb der oberen Grenze,
+die der Länge der Aufzählung entspricht.
+
+
+Zu guter letzt spricht einiges dafür die Null
+als eine naürliche Zahl zu betrachten.
+____

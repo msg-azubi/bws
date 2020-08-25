@@ -1,0 +1,12 @@
+.Spielerische Übung zu
+****
+link:https://doc.qt.io/qt-5/qlistwidget.html[QListWidget]::
+suche auf dieser Seite nach `clear` und `setVisible` :::
++
+Erläutere warum im Code `setVisible(false)`
+stehen kann, obwohl es keine  Eintrag für `setVisible(false)`
+auf link:https://doc.qt.io/qt-5/qlistwidget.html[QListWidget] gibt.
++
+Nutze den _Inherits_ Eintrag. An welchen Objekt findest du
+`setVisible` als Slot.
+****

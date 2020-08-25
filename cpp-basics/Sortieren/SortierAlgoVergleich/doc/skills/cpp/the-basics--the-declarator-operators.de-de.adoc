@@ -1,0 +1,62 @@
+[quote, 'Sec 1.7 in englischen Buch', 'Beginning C++17 (2018) von Ivor Horton und Peter Vaan Weert]
+____
+Wenn die Operator  `&`, `*`,  `[ ]` und `( )` in einer Deklaration auftreten,
+beeinflussen sie die Bedeutung der Deklaration.
+
+Die ersten drei Operator können direkt auf einen Typdeklaration, `T` folgen
+und verknüpfen sich mit dem Typ `T` zu einer Typvariante.
+
+
+Daher spricht man auch von ihnen als Operatoren für die Typdeklaration.
+
+
+.Die Erzeugung von Typvarianten durch die Verknüpfung mit Deklarationsoperatoren. D. h. im folgenden wird ein Typ `T` verändert.
+[cols="1,4"]
+|===
+a|
+`T[N] a` oder `T a[N]`
+a|
+Der Name `a` steht einen Array
+von `N` Elementen  des Typs `T`. +
+Es gibt auch eine Variante diese Typdeklaratin,
+wo der Deklarationsoperator `[ ]` nicht direkt auf den T folgt,
+sondern erst auf den Namen der Variable `a`.
+
+a| `T* p`
+a| Die Verknüpfung `T*` steht für den Typ #Zeiger auf ein Objekt vom Typ ``T``#.
+   Der Begriff _Objekt_ repräsentiert hier allgemein einen Speicherbereich,
+   d. h. mehrere Speicherzellen.
+   Ein Zeiger kennt zum einen eine Speicheradresse, wo ein Wert abgelegt ist,
+   und zum anderen den Typ des Wert, nämlich `T`. Intern wird über den Typ festgelegt
+   wie viele Speicherzellen nötig sind, um das Objekt zu repräsentieren.
+   Mit anderen Worten: Der Name `p` steht für einen Zeiger auf eine Speicheradresse
+   und die Speicheradresse selbst enthält einen Wert von Typ `T`.
+   Kurz: Die Deklaration `T*` deklarierte eine Zeiger (_engl._ pointer).
+
+a| `T& r`
+a| `T&` deklariert eine Referenz auf den Typ `T`. +
+    Damit steht der Name `r` für eine Referenz auf den Typ `T``
+
+Eine Referenz ist ein spezielle Form eines Pointers.
+
+* Die Referenz bedarf nicht des Operators `*`,
+  um den Wert lese zu können der referenziert wird.
+* Außerdem kann für ein Referenz nach der Initialisierung
+  nicht mehr die Speicheradresse, auf die referenziert wird,
+  verändert werden.
+
+
+a|
+`T(A): f`    oder `T f(A)`
+a|
+Der Deklarationsoperator `( )` unterstützt die Deklaration von Funktionen. +
+Typischerweise folgt dafür der Deklarationsoperator auf den Bezeichner: `T f(A)`. +
+Umzu verdeutlichen, dass ein Bezeichner für eine Funktion steht, kann man `T(A): f`
+schreiben.
+
+WARNING:: Geht `T(A): f` auch praktisch?
+
+|===
+
+// end-of quote
+____
