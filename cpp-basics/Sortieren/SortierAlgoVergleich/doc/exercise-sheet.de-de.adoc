@@ -1,0 +1,26 @@
+.Übungsblatt zu Thema Sortieralgorithmen
+****
+INFORMATION::
+Dieses Übungsblatt besteht aus zwei Aufgaben. Die Aufgabe 1 liefert einen Teil Rüstzeug für die Aufgabe 2.
++
+Mit anderen Worten: Die Aufgabe 1 vermittelt einen Teil des Wissens und Könnens,
+das Voraussetzung ist, um die Aufgabe 2 gut zu bearbeiten.
+
+Wortschatz:::
+Merke dir folgenden Begriff
+Rüstzeug::::
+Der Begriff _Rüstzeug_ wird zum Beispiel auf link:https://de.thefreedictionary.com/rüstzeug[de.thefreedictionary.com]
+gut erläutert.
+****
+
+
+Aufgabe 1 (Kat. B): ::
+[loweralpha]
+. Finden Sie alle Fehler im Code mit Nennung der Zeilennummer und Fehlerart und
+machen Sie  einen Korrekturvorschlag.
+
+
+. Zeichnen Sie ein UML-Anwendungsfalldiagramm, oft auch als Use Case Diagramm bezeichnet.
+
+. Setzen Sie den Code in ein Qt-Projekt um.
++
