@@ -91,7 +91,7 @@ Zusatzfragen::
 Angenommen `origArray` sollte statt eines `int`-Arrays ein `double`-Array sein, wo wären bei diesen Code-Ausschnitten
 Änderungen nötig?
 
-* In Zeile 5 starte die Definition einer .................
+* In Zeile 5 startet die Definition einer ................. +
   die in Zeile 12 endet.
 +
 Was wird hier deklariert eine Funktion oder eine Methode?
@@ -104,13 +104,21 @@ Versuche allein durch Lesen der Deklaration,
 also der Kopfzeile der Definition zu erfassen,
 was die Aufgabe der Funktion ist.
 
-Lese die Definition::
+Lese die Definition von `arrayAnzeigen`::
 Spiele dabei mit der link:https://doc.qt.io/qt-5/[Qt Documentation]
+Denn einer der übergebenen Parameter ist in der link:https://doc.qt.io/qt-5/[Qt Documentation].
++
+Empfohlen wird ein Blick auf die folgenden Teil der
+link:https://doc.qt.io/qt-5/[Qt Documentation]:
+
+Das link:https://doc.qt.io/qt-5/modelview.html[Model/View tutorial]:::
+beschreibt, dass es zwei verschiedene Weise gibt
+wie Widgets auf ihre Daten zugreifen.
 
 
-link:https://doc.qt.io/qt-5/qlistwidget.html[QListWidget]::
+link:https://doc.qt.io/qt-5/qlistwidget.html[QListWidget]:::
 
-suche auf dieser Seite nach `addItem`:::
+suche auf dieser Seite nach `addItem`::::
 Erläutere was in der Schleife passiert.
 
 Zusatzaufgaben:::
@@ -123,14 +131,51 @@ skills/qt-excercise/intro--signals-and-slots.adoc
 skills/qt-excercise/QListWidget--clear-and-setVisible.adoc
 ----
 
-Beschreibe mit eigenen Worten auf Aufgabe die `arrayAnzeigen`:::
+Beschreibe mit eigenen Worten auf Aufgaben von `arrayAnzeigen`:::
 
 
-
-Welche Fehlerart wird in den Zeilen 5 bis 12 gefunden?::
+Welche Fehlerart wird in den Zeilen 5 bis 12 gefunden?:::
 Hinweise ergeben sich über
 +
 ----
 ./skills/in-general/quote--why-numbering-should-start-at-zero.de-de.adoc
 ----
++
+Diese Fehler ist vermeintbar, wenn statt der traditionellen
+`for` Schleife eine range-based `for` Schleife verwendet wird.
+Information zu range-based `for`:
 
+
+Verständnisfrage:::
+Ist diese Deklaration ein Teil der Klassen-Deklaration
+`FrmMain`?
+
+* In Zeile 14 startet die Definition einer ................. +
+die in Zeile 26 endet.
++
+Welche Fehlerart wird in den Zeilen 14 bis 26 gefunden?:::
+Hier ein paar Hinweise zu den Fehlern:
+
+Was ist ein Deklarationsfehler?::::
+
+//
+
+Welche Anmerkung im Code muss beachtet werden, um den logischen Fehler zu finden?::::
+
+//
+
+* In Zeile 28 startet die Definition einer ................. +
+die in Zeile 40 endet.
++
+Erläutere wofür `this.setCursor` benutzt wird. ::
+
+//
+Welche Möglichkeit gibt es den Wert von `anzElemente` abzugreifen?::
+Hinweis:::
+Aufgabe 2 zeigt eine GUI.
+
+Woher kommt origArray in Zeile 33?::ls
+
+
+
+Beschreibe die Aufgabe der Methode.::

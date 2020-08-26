@@ -1,0 +1,4 @@
+This directory contains the following subdirectories,
+which contain standalone units
+which are reference by 
+`..\excercise-sheet.adoc`.
