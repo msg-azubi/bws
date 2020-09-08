@@ -1,0 +1,76 @@
+@startuml
+
+
+
+
+object  Typendefinierung <<globale>> {
+   {static} int = Datentyp
+}
+
+
+object  Variable <<globale>> {
+    {static} origArray
+}
+
+object Funktion  <<globale>> {
+    {static} arrayAnzeigen()
+}
+
+ object Funktion  <<globale>>  {
+    {static} bubbelSort()
+}
+
+note  as explainModelingOfGlobalElements
+<b>UML unterstützt die Modellierung von </b>
+<b>globalen Elementen nur indirekt</b>
+
+Reine OO-Sprachen kennen keine globalen Elemente.
+UML wurde für reine OO-Sprachen entwickelt.
+Daher bietet UML keine direkte Modellierung
+für globale Elemente an.
+
+Indirekt lassen sich globale Elemente modellieren.
+Zwei Modellierungsarten für globale Elemente sind:
+
+* Die Modellierung von globalen Elementtypen als Objekttypen
+
+* Die Modellierung von globalen Element als Klassenelemente
+
+end note
+
+
+note as explainModelingOfGlobalElementtypsAsObjects
+
+
+<b>Modellierung von globalen Elementtypen als Objekttypen</b>
+
+Indirekt lassen sich globale Elementtyp als Objekttyp verstehen.
+
+...
+
+Die Modellierung in einzelnen Schritten zur Umsetzung mit PlantUML:
+
+* Der Elementtyp wird ein eigenständiges Objekt
+   <i>In PlantUML bedeutet dies:</i>
+   Der Elementtyp wird als Objektnamen verwendet.
+
+* Das Objekt bekommt einen Stereotyp, der das Element
+   als globales Element markiert.
+   <i>In PlantUML bedeutet dies:</i>
+   Der Name eines Stereotyp folgt den Objektnamen
+   und wirdvon zwei Spitzenklammern umschlossen.
+   Beispiel: <i><<globale>></i>
+
+* Das globale Element wird as statisches Element dargestellt.
+   Die Unterstreichung kennzeichnet ein Elemente als
+   statisches Elemente.
+   <i>In PlantUML bedeutet dies:</i>
+   Der Modifikator ""{static}"" (oder ""classifier"")
+   wird am Anfang oder Ende der Zeile verwendet,
+   die das globale Element definiert.
+end note
+
+Typendefinierung .. explainModelingOfGlobalElementtypsAsObjects
+Funktion .. explainModelingOfGlobalElementtypsAsObjects
+Variable .. explainModelingOfGlobalElementtypsAsObjects
+@enduml

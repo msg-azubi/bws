@@ -1,0 +1,51 @@
+.Standalone elements in UML darstellen
+*****
+
+Globale Element werden manchmal auch Elemente der höchsten Ebene
+(_engl._ _top-level elemente_) bezeichnet.
+Solche ein Element, sei es eine Funktion oder eine Variable,
+ist nicht durch eine Klasse oder einen Namensraum vom der höchsten
+Programmebene abgeschottet (_engl._ to encapsulate ).
+
+Solche globale Elemente sind zum Beipiel {cpp},
+das mehrere Programmierstile unterstützt möglich.
+In rein objektorientierten Sprachen wie Java
+gibt es keine globalen Elemente.
+
+UML Diagramm wurde für rein objektorientierten Sprachen entwickelt.
+Folglich unterstützt UML solche globale Elemente nicht direkt.
+
+Für die Modellierung globaler Elemente kann in UML  die
+folgende Umschreibung verwendet werden
+oder der Code muss UML kompatibel geschrieben werden.
+
+
+* Alle globalen Elemente werden als statische Elemente einer Klasse modelliert.
++
+.Die Modellierung globaler Elemente als Klassenelemente.
+image::../../uml/generated/UML__Denote_global_elements_as_static_class_members.png[]
+
+
+* Alle globalen Elementtypen werden als statische Objekt dargestellt.
++
+image::../../uml/generated/UML__Denote_each_global_elementtyp_as_an_objecttyp.png[]
+
+
+
+== ToDO
+
+
+model it as static method of a special class called e.g. `global`
++
+Rather than call the class or stereotype "global"
+think about to put the "top-level" elements
+in a well named namespace.
++
+A namespace called `uiHelper` is far superior to just
+having this be `arrayAnzeigen`a "top-level" function.
+
+A UML does not allow to model top-level elements.
+But then at this point you may as well put
+it in a `UiHelper` class as a static method.
+This is the best option to keep the UML notation and the code in sync.
+*****

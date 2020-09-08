@@ -1,0 +1,109 @@
+@startuml
+/'
+Das Use Case die Diagramm visualisiert die Codebruchstücke
+von der Aufgabe 1 zum Thema Sortieralgorithmen
+
+Nach folgend jedes PlantUML Kommando ausführlich kommentiert:
+
+* ein semantischer Kommentar steht vor dem PlantUML Kommando
+* eine Erläuterung zur PlantUML Syntax folgt nach dem Kommando
+'/
+' In der Plant UML Syntax ist ' das Zeichen für eine Kommentarzeile
+' und  /' der Start sowie '/ das Ende eines mehrzeiligen Kommentars.
+
+left to right direction
+' Das ist in der PlantUML Syntax eine Möglichkeit
+' eine Layout zu beeinflussen.
+
+' Die Gui der App wird über den Frame 'FrmMain'
+package Frame {
+' Das Code Bruchstück zeigt an:
+(origArray benutzen)
+' Die runden Klammer mit Text stehen in der PlantUML Syntax
+' für eine UseCase Blase mit Text
+
+' Das Code Bruchstück zeigt an:
+(Array anzeigen \nin QListWidget)
+
+' Das Code Bruchstück zeigt an:
+usecase Anwendungsfall_BubbelSort as "
+Bubbelsort ausführen
+"
+' Das ist in der PlantUML Syntax eine Möglichkeit
+' eine UseCase Blase per Namen zu referenzieren.
+
+
+' Das Code Bruchstück zeigt, an:
+' Es gibt einen Benutzer,  der etwas clickt.
+actor  benutzer as "
+Benutzer des Frames:
+SortierAlgorithmen
+"
+' Das ist in der PlantUML Syntax eine Möglichkeit
+' eine Strichmännchen für den Akteur zu visualisieren.
+
+' Das Code Bruchstück zeigt, an:
+' Vom Akteur wird der Anwendungsfall benutzt.
+benutzer .. Anwendungsfall_BubbelSort
+' Das ist in der PlantUML Syntax eine Möglichkeit, um eine
+' Verbindungsline zwischen Akteur und UseCase zu ziehen.
+
+' Das Code Bruchstück detailiert  den Anwendungsfall.
+usecase Anwendungsfall_BubbelSort_im_Detail as "
+Per ""WaitCursor ""dem Nutzer die Ausführung ankündigen
+Die Variable ""tmpArray"" für sortierten Array benutzen
+Bubbelsort-Algorithmus unter Zeitmessung ausführen
+Die  gemessene Zeit ausgeben
+Den sortierten Array anzeigen, dazu ein "QListWidget" Objekt mit Namen ""lwKopie"" benutzen
+Per ""ArrowCursor"" dem Nutzer die Beendigung der Ausführung ankündigen
+"
+' Die PlantUML Syntax unterstützt einige Textformatierungen.
+' z. B wird stellt  ""ArrowCursor"" den Text in der Schriftart
+' für Code dar.
+
+' Die Detailierung eines Anwendungsfall wird in Use Case Diagramm
+' zu einer include Verknüpfung. Das ist ein Pfeil von Anwendungsfall
+' mit Kurzbeschreibung zum Anwendungsfall mit Detailierung.
+Anwendungsfall_BubbelSort .> Anwendungsfall_BubbelSort_im_Detail : include
+
+}
+
+
+
+
+
+note right of Frame
+Die Angaben der Aufgabe 1 enthalten nur Code-Bruchstücke.
+
+Die einzelnen Code-Bruchstücke sind hier als Anwendungsfälle dargestellt.
+
+Es ergibt sich keine vollständige Information, um ein sinnvolles Anwendungsfall-Diagramm
+zu erstellen. Denn zwei Anwendungsfälle sind ohne Verknüpfung zu einem Akteur.
+
+*  <i>origArray benutzen</i> und
+*  <i>Array anzeigen in QListWidget</i>
+
+Daher wird empfohlen das vollständige Arbeitsblatt (Aufgabe 1 und 2)
+in einem weiteren Schriit für die Darstellung des Anwendungsfalldiagramms
+zu verwenden.
+
+Das Einbeziehen der Aufgabe 2 ist auch deshalb sinnvoll, weil dort
+die graphische Benutzeroberfläche (GUI) beschrieben wird.
+
+Denn allgemein gilt:
+
+* Ein Use Cases lassen sich oft in GUIs umsetzen.
+  Denn die Akteur zu einem Anwendungsfall sinc häufig Personen
+  mit einer bestimmten Rolle.
+
+Auch der Umkehrschluss gilt genauso:
+
+* Aus GUIs können Use Cases abgeleitet werden.
+end note
+@enduml
+
+
+$unlinkedUuseCase = "unverknüpfter Anwendungsfall"
+note
+
+end note

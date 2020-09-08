@@ -1,0 +1,23 @@
+@startuml
+
+User -> (Start)
+
+note right
+= Unterstütze Textformatierungen in PlantUML
+== Schiftstil
+<b>Fettschrift </b> <i>engl.</i>bold text
+<i>kursiv</i>  <i>engl.</i>italics text
+<s> durchgestrichen </s> <i>engl.</i> strike text
+<u>gerade Unterstreichung</u> <i>engl.</i> to underline text
+<w>wellige Unterstreichung</w>  <i>engl.</i> wave underline
+== Schriftfarbe
+<color:green> farbige Schrift</color>
+<back:red> farbiger Hintergrund </back>
+== Schriftgröße
+Die <size:20>Schriftgröße</size> verändern <i>engl.</i> to change font size
+== Bild einfügen
+</img:file.png>the file must be accessible by the filesystem
+<img:http://plantuml.com/logo3.png> : the URL must be available from the Internet
+end note
+
+@enduml

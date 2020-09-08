@@ -1,0 +1,172 @@
+.Hinweis zur Aufgabe 1 a) des Übungsblattes _Sortieralgorithmen_
+****
+* Es ist zu erwarten, dass drei Fehlerarten im Code zu finden sind: Syntax-Fehler, semantische Fehler und logische Fehler.
++
+Syntax-Fehler verstoßen nicht gegen die Sprachregeln
+und werden auch durch den Compiler einer Sprache erkannt.
+Moderne IDEs finden Syntax-Fehler bereits während des Editierens.
++
+Fehler, die bei der Durchsicht von Code schwieriger zu finden sind,
+als Syntax-Fehler, sind:
+
+semantische Fehler::
+verstoßen nicht gegen die Syntax,
+aber bezogen auf die Bedeutung,
+also die Semantik, die der Code haben soll, ergibt sich ein Fehler.
+Eine klare Tennung zwischen semantischen Fehlern
+und logischen Fehlern ist schwierig.
+
+.Das Rüstzeug für Aufgabe 1.a ist: _Die Fehlerarten von Software kennen_.
+*****
+Auf link:https://de.wikipedia.org/wiki/Programmfehler#Klassifizierung_von_Fehlern[de.wikipedia.org]
+werden zum Beispiel diese fünf Fehlerarten genannt: +
+Lexikalische Fehler (unbekannter Bezug),
+syntaktische Fehler (vergessenes Semikolon),
+semantische Fehler (falsche Deklaration),
+Laufzeitfehler (falsch formatierte Eingabedaten) und
+logische Fehler (plus statt minus, Schleifenfehler, …)
+
+Eine etwas andere Liste von Fehlerarten wird
+im  Kapitel _Finden und Vermeiden von Software-Fehlern_
+der Vorlesung _Einführung in die Informatik (TU Freiberg, WS 2087/08)_
+gegeben (Details in link:www.informatik.tu-freiberg.de/lehre/pflicht/EinInf/ws07/Informatik17-Softwarefehler.pdf[Vorlesungsfolien]). +
+
+Syntax-Fehler::
+Verstoß gegen grammatikalische Regel der Programmiersprache.
+Programm wird nicht ausgeführt.
+semantische Fehler::
+stell ein korrektes Sprachkonstrukt dar,
+sind aber im Kontext der Aufgabe falsch.
+Z. B eine falsche Deklaration.
+logische Fehler::
+falscher Problemlösungsansatz oder
+der Algorithmus ist nicht korrekt
+Laufzeitfehler::
+z.B. Absturz des Programms bei unerwarteten Eingaben;
+z.B. nicht vorhergesehene Endlosschleifen.
+Designfehler::
+Fehler bei Anforderungsdefinition;
+beruhend auf Missverständnissen zw. Anwender und Nutzer
+Bedienfehler::
+unübersichtliches Bedienungskonzept.
+*****
+
+
+.Hinweise zum Code Reading in Aufgabe 1.a.
+*****
+
+* Die Zeile 1 deklariert einen neuen Typ `datentyp`,
+Zeile 3 nutzt den neuen Datentyp, um eine Variable, `origArray`, zu deklarieren.
++
+Von welchen Typ ist die deklarierte Variable?::
+Allgemeine Rüstzeug zu Typen in {cpp} liefert diese Datei:
++
+----
+./skills/cpp/the-basics--the-declarator-operators.de-de.adoc
+----
+
+
+
++
+Zusatzfragen::
+Angenommen `origArray` sollte statt eines `int`-Arrays ein `double`-Array sein, wo wären bei diesen Code-Ausschnitten
+Änderungen nötig?
+
+* In Zeile 5 startet die Definition einer ................. +
+die in Zeile 12 endet.
++
+Was wird hier deklariert eine Funktion oder eine Methode?
+Worin liegt der Unterschied?
++
+Welche Parameter werden übergeben?::
+
+Beschreibe die Aufgabe der Funktion mit einem Satz::
+Versuche allein durch Lesen der Deklaration,
+also der Kopfzeile der Definition zu erfassen,
+was die Aufgabe der Funktion ist.
+
+Lese die Definition von `arrayAnzeigen`::
+Spiele dabei mit der link:https://doc.qt.io/qt-5/[Qt Documentation].
+Denn einer der übergebenen Parameter ist in der link:https://doc.qt.io/qt-5/[Qt Documentation].
++
+Empfohlen wird ein Blick auf die folgenden Teile der
+link:https://doc.qt.io/qt-5/[Qt Documentation]:
+
+Das link:https://doc.qt.io/qt-5/modelview.html[Model/View tutorial]:::
+beschreibt, dass es zwei verschiedene Weise gibt
+wie Widgets auf ihre Daten zugreifen.
+
+
+link:https://doc.qt.io/qt-5/qlistwidget.html[QListWidget]:::
+
+suche auf dieser Seite nach `addItem`::::
+
+Erläutere was in der Schleife  von `arrayAnzeigen` passiert!:::
+
+
+Zusatzaufgaben:::
++
+----
+skills/qt-excercise/intro--signals-and-slots.adoc
+----
++
+----
+skills/qt-excercise/QListWidget--clear-and-setVisible.adoc
+----
+
+Beschreibe mit eigenen Worten auf Aufgaben von `arrayAnzeigen`:::
+
+
+Welche Fehlerart wird in den Zeilen 5 bis 12 gefunden?:::
+Hinweise ergeben sich über
++
+----
+./skills/in-general/quote--why-numbering-should-start-at-zero.de-de.adoc
+----
++
+Dieser Fehler ist vermeidbar, wenn statt der traditionellen
+`for` Schleife eine range-based `for` Schleife verwendet wird.
+Information zu range-based `for`:
+
+
+Verständnisfrage:::
+Ist diese Deklaration ein Teil der Klassen-Deklaration
+`FrmMain`?
+
+* In Zeile 14 startet die Definition einer ................. +
+die in Zeile 26 endet.
++
+Welche Fehlerart wird in den Zeilen 14 bis 26 gefunden?:::
+Hier ein paar Hinweise zu den Fehlern:
+
+Was ist ein Deklarationsfehler?::::
+
+//
+
+Welche Anmerkung im Code muss beachtet werden, um den logischen Fehler zu finden?::::
+
+//
+
+* In Zeile 28 startet die Definition einer ................. +
+die in Zeile 40 endet.
++
+Erläutere, wofür `this.setCursor` benutzt wird. ::
+
+//
+Welche Möglichkeit gibt es den Wert von `anzElemente` abzugreifen?::
+Hinweis:::
+Aufgabe 2 zeigt eine GUI.
+
+Woher kommt `origArray` in Zeile 33?::
+Oder anders gefragt, wohin gehört die Codezeilen 1 und 3,
+die einen neuen Datentyp definieren
+und den neuen Datentyp nutzen,
+um die Variable `origArray` zu deklarieren.
+
+Beschreibe die Aufgabe dieser Methode.::
+
+// end-of
+*****
+
+// end-of
+****

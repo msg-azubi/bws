@@ -1,0 +1,50 @@
+@startuml
+
+class Elemente <<globale>> {
+    {static} origArray
+    {static} arrayAnzeigen()
+    {static} bubbelSort()
+}
+
+note  as explainModelingOfGlobalElements
+<b>UML unterstützt die Modellierung von </b>
+<b>globalen Elementen nur indirekt</b>
+
+Reine OO-Sprachen kennen keine globalen Elemente.
+UML wurde für reine OO-Sprachen entwickelt.
+Daher bietet UML keine direkte Modellierung
+für globale Elemente an.
+
+Indirekt lassen sich globale Elemente modellieren.
+Zwei Modellierungen für globale Elemente sind:
+
+
+* Die Modellierung von globalen Elementtypen als Objekttypen
+
+* Die Modellierung von globalen Element als Klassenelemente
+
+end note
+
+
+
+note as explainModelingAsStaticClassMembers
+<b>Die Modellierung von globalen Element als Klassenelemente </b>
+
+Indirekt lassen sich globale Elmente zum Beispiel als
+<i>Klassenelemente</i> einer Klasse modellieren.
+
+Hier wid der Klassenname ""Elemente"" verwendet
+mit dem Stereotype wie <i><<globale>></i>.
+
+Mit der Unterstreichung der Elemente wird angezeigt,
+dass es keine Instanzelemente sind,
+sondern Klassenelemente.
+
+In PlantUML werden Klassenelemente erzeugt,
+in dem der Modifikator ""{static}"" (oder ""classifier"")
+am Anfang oder Ende der Zeile verwendet,
+die das Element definiert.
+end note
+
+Elemente .. explainModelingAsStaticClassMembers
+@enduml

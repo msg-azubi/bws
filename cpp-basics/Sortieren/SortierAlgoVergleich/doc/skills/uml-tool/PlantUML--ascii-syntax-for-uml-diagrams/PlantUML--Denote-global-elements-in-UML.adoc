@@ -1,0 +1,25 @@
+.Denote global elements in UML
+*****
+
+.How do I denote a globale function in UML diagram notation,
+
+A _global function_ is sometimes also called _top-level function_
+Such a function doesn't have any encapsulating class or other structure?
+
+When you need to create a UML diagram for a global element in UML
+can not directly model it. Here are some workarounds
+
+* model it as static method of a special class called e.g. `global`
++
+Rather than call the class or stereotype "global"
+think about to put the "top-level" elements
+in a well named namespace.
++
+A namespace called `uiHelper` is far superior to just
+having this be `arrayAnzeigen`a "top-level" function.
+
+A UML does not allow to model top-level elements.
+But then at this point you may as well put
+it in a `UiHelper` class as a static method.
+This is the best option to keep the UML notation and the code in sync.
+*****

@@ -1,0 +1,41 @@
+@startuml
+
+left to right direction
+actor "Benutzer des Frames: \n  'Sortieralgorithmen'" as frameUser
+
+package Frame {
+usecase "Erzeuge Array" as UC_ErzeugeArray
+usecase "Sortiere Array" as UC_SortiereArray
+usecase "BubbelSort" as UC_SortAlgoBubbelSort
+
+}
+frameUser --> UC_ErzeugeArray
+frameUser --> UC_SortiereArray
+UC_SortiereArray .> UC_SortAlgoBubbelSort : include
+
+note right of UC_ErzeugeArray
+Erzeuge einen Array;
+nutze dafür einen Zufallsgenerator.
+Zeige den erzeugten Array in einem QListWidget an
+mit der Bezeichnung: lwKopie
+end note
+
+note right of UC_SortiereArray
+Bringe die Applikation zuerst
+nur mit dem BubbelSort-Algorithmus
+zum Laufen
+
+Sobald die Applikation fehlerfrei läuft,
+implementiere weitere Sortieralgorithmen.
+end note
+
+note right of UC_SortiereArray
+Sortiere den erzeugten Array.
+Nutze dafür verschiedene Sortieralgorithmen.
+Zeige den erzeugten Array in einem QListWidget an
+mit der Bezeichnung: lwSortedArray.
+
+Informiere über die Laufzeit des Algorithmus.
+end note
+
+@enduml

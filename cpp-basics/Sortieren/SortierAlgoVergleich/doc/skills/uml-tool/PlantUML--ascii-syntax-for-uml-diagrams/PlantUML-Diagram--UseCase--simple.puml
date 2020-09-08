@@ -1,0 +1,18 @@
+@startuml
+'default layout
+top to bottom direction
+' Akteur definieren
+actor advancedUser as "
+fortgeschrittener
+Benutzer
+"
+' Aktuer
+advancedUser <<human>>
+' Anwendungsfall
+usecase app4advancedUser as "
+benutze erweitertes
+Applikationsmenu
+"
+' Verknüpfung zw. Akteur und Anwendungsfall
+advancedUser -> app4advancedUser
+@enduml

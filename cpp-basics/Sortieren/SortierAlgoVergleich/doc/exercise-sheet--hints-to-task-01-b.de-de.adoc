@@ -1,0 +1,144 @@
+.Hinweis zur Aufgabe 1 b) des Übungsblattes _Sortieralgorithmen_
+****
+
+Das Rüstzeug::
+Das Rüstzeug: Anwendungsfalldiagramme :::
+Anwendungsfalldiagramme werden im Englischen
+als _use case diagrams_ bezeichnet.
+
+Das Rüstzeug: Infrastruktur für UML-Diagramme PlantUML :::
+PlantUML ermöglicht per Ascii-Syntax
+UML Diagramme zu schreiben.
+Einen Überblick über die Möglichkeiten von PlantUML
+bietet die
+link:https://plantuml.com/de/[deutschsprachige PlantUML Startseite].
++
+Hier werden wir nur eine UML Diagrammart eingehen: das UML-Diagramm _Anwendungsfall_.
+In Praxis wird es oft als _Use Case_ Diagramm bezeichnet.
+
+PlantUML-Syntax in Bilder umwandeln::::
+Für die Entwicklungsumgebung _IntelliJ_ gibt es ein Plugin,
+das es ermöglicht den ASCII-Code von PlantUML als Diagramm zu
+visualisieren. Die visualisierten Diagramm lassen sich auch als
+Bilder speichern.
+
+[NOTE]
+====
+
+====
+****
+
+Aufgabe: Die Information aus Code der Aufgabe 1 mittels eines _Anwendungsfall_ Diagramms veranschaulichen. ::
+Softwareprojekt starten oft mit einer Design-Phase.
+Typischerweise werden die Ergebnisse der Design-Phase
+mittels UML Diagramm zusammengefasst. +
+Die Idee dieser Aufgabe ist der umgekehrte Weg:
+
+Reengineering:::
+Überlege welches _UseCase_ Diagramm könnte
+zur Verfügung gestanden haben
+bei der Erstellung dieses Code.
++
+Im Englischen bezeichnet man diese als
+: _reverse engineering_  oder kurz _reengineering_.
++
+Beim _Reverse Engineering_ wird vom Produkt,
+hier ist das Produkt der Quellcode,
+auf die Designdokumente geschlossen,
+um das Produkt nachbauen zu können.
++
+Hier wird von den gegebenen Quellausschnitten
+auf ein UML Anwendungsfalldiagramm
+als Designdokument geschlossen.
+Dazu ist eine intensive Beschäftigung mit dem Code nötig.
++
+Ein Reengineering kann mehrere Stufen haben.
+
+Reengineering (Stufe 1): Die Aktionen des Codes:::
+Hier ein erstes Ergebnis eines Reengineering Versuches.
+Alle Information im  _Use Case_ Diagramm stammt aus
+dem Code der Aufgabe 1.
++
+image::skills/uml/generated/UC_GUI_SortierAlgos__based_only_on_infos_of_task_1.png[]
+
+
+Reengineering (Stufe 2): Der Bedienablauf :::
+Die Aufgabe 2 zeigt eine graphische Benutzeroberfläche
+(_engl._ graphical user interface).
+Manchmal auch kurz als _GUI_ bezeichnet.
++
+Im wesentlichem unterstützt die Oberfläche
+zwei Arbeitsschritt: Das Erzeugen eines Array und das anschließend Anzeigen
+einer sortierten Version dieses Arrays.
++
+image::skills/uml/generated/UC_GUI_SortierAlgos__overview.png[]
+
+
+Reengineering (Stufe 3): Das _Use Case_ Diagramm :::
+Die Benutzeroberfläche gruppiert und rahmt zwei Interaktionen ein:
+_Erzeuge Array_ und _Sortiere Array_.
+Der Nutzer (_engl._ user) kann direkt diese Aktionen konfigurieren und starten.
+Im UML Diagramm _Use Case_ wird diese deutlich durch die Verwendung eines
+Pfeils zwischen Akteur und Use Case.
++
+image::skills/uml/generated/UC_GUI_SortierAlgos__based_on_infos_of_task_1_and_2.png[]
++
+Außerdem zeigt das _Use Case_ Diagramm eine _include_ Beziehung.
++
+.Die _include_ Beziehung in _Use Case_ Diagrammen
+****
+Eine _include_ Beziehung hebt eine Teilfunktionalität hervor.
+Hier wird hervorgehoben, dass der _Sortiere Array_ als
+Unterfunktionalität den Sortieralgorithmus _Bubblesort_ benutzt.
+
+Mit anderen Worten:
+Der Anwendungsfall _sortiere Array_ schließt
+die Nutzung des Sortieralgorithmus mit ein.
+Das deutsche _etwas einschließen_ oder _etwas mit enthalten_
+entspricht dem englischen Verb _to include_.
+
+.Die _include_ Beziehung in Use Case Diagrammen
+image::skills/uml/generated/UC_GUI_SortierAlgos__based_only_on_infos_of_task_1__focus_include.png[]
+
+Übrigens werden in diesem Diagramm einige Textformatierungen,
+die von PlantUML unterstützt werden, benutzt. Mehr dayu
+
+Mehr im Exkurs *Die Ascii Syntax von PlantUML für einen __Use Case__*.
+Der Exkurs zeigt wie der Ascii Code aussieht die hier gezeigten Use Cases.
+
+.Der Exkurse zur *Ascii Syntax von PlantUML* befinden sich unter folgendem Pfad:
+----
+./skills/uml-tool/PlantUML--ascii-syntax-for-uml-diagrams
+
+Hinweis: Das aktuelle Verzeichnis ist jenes,
+         indem das gerade gelesene Dokumment
+            exercise-sheet--hints-to-task-01-b.de-de.
+         liegt.
+
+Das Dokument
+    PlantUML--ascii-syntax-for-uml-diagrams.de-deadoc
+fasst folgende einzel Exkurse zu einem Dokument zusammen:
+    PlantUML-Diagramm--UseCase
+    PlantUML-LayoutOptions.de-de.adoc
+----
+
+
+****
++
+Neben der _include_-Beziehung gibt es auch eine _exclude_ Beziehung in _Use Case_ Diagrammen.
++
+.Die _exclude_ Beziehung in _Use Case_ Diagrammen
+****
+Mit einer _extend_ Beziehung werden Optionen beschrieben.
+Optionen sind Funktionalitäten, die -- je nach Situation -- genutzt werden
+oder nicht genutzt werden. Im _Use Case_ Diagramm
+werden die Optionen einer Funktionalität etwas abgesondert
+von der Kernfunktionaliät dargestellt. Die Zugehörigkeit
+einer Option zur Kernfunktionalität wird per Pfeil visualisiert.
+Das Deutsche _etwas absondern_ oder _etwas ausgrenzen_
+entspricht dem englischen _to exclude_.
+
+Die Benutzeroberfläche _Sortieralgorithmen_ bietet zum
+Beispiel bei de Kernfunktionalität _Erzeuge Array_,
+die Option das der erzeugte Array ein sortierter Array ist.
+****

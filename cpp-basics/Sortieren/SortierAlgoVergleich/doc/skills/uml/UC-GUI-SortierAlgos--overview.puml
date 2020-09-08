@@ -1,0 +1,19 @@
+@startuml
+rectangle  Ablauf {
+left to right direction
+note "Wähle Sortier-Algorithmus" as N2
+actor "Benutzer des Frames: \n  'Sortieralgorithmen'" as frameUser2
+
+frameUser2 -> (Erzeuge Array)
+(Erzeuge Array) .. N2
+N2 .. (Sortiere Array)
+(Sortiere Array)
+
+note bottom of (Sortiere Array)
+Lasse einen erzeugten Array
+durch verschiedene Algorithmen sortieren.
+
+Vergleich die Laufzeiten.
+end note
+
+@enduml

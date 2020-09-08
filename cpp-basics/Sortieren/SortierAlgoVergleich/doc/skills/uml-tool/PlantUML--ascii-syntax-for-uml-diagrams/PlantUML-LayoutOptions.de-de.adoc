@@ -1,0 +1,44 @@
+.Exkurs zu dem Layoutoption von PlantUML
+****
+
+Dieser Exkurs stellt die
+link:https://plantuml.com/de/creole[Textformatierungen, die von PlantUML unterstützt werden], vor.
+
+Da sind zum einen HTML Auszeichnungen (_engl._ HTML tags),
+die mit einem Start-Tag die Formatierung einschalten
+und mit einem End-Tag die Formatierung beenden
+oder
+
+.Die HTML Tags, die von  PlantUML für die Textformatierung unterstützt werden.
+[cols="4"]
+|===
+
+| (Start-)Tag
+| für
+| Ascii-Syntaxbeispiel
+| Anwendungsbeispiel
+
+a| `<b>`
+v|
+Fettschrift
+(engl. bold)
+a| `Umschalten auf <b>Fettschrift</b>`
+| Umschalten auf *Fettschrift*
+
+a| `<i>`
+v|
+kursive Schrift
+(engl. italic)
+a| `Umschalten auf <i>kursiv</i>`
+| Umschalten auf _kursiv_
+
+a| `<color:red>`
+v|
+farbige Schrift
+(engl. color)
+a| `Umschalten auf <color:red>farbig</color>`
+| Umschalten auf _farbig_
+|===
+
+
+****
