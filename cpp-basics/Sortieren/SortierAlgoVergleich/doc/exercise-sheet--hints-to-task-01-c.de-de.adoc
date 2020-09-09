@@ -2,18 +2,75 @@
 ****
 
 Das Rüstzeug::
-Das Rüstzeug: Code für ein Qt-Project :::
-todo
+Das Rüstzeug: Code für ein Qt-Projekt :::
+Uns werden Code-Bruchstücke zur Verfügung gestellt,
+von denen über die Aufgabe a) bekannt ist,
+dass dieser Code Fehler enthält.
++
+Unser wichtiges Rüstzeug heißt:
+* Code lesen; sich seinen Informationsgehalt erschließen;
+  die Fehler entdecken.
+
+Typischerweise ist es nicht möglich beim einmaligen Lesen
+alle Information zu erfassen.
+Wie ein mehrstufiger Leseprozess aussieht,
+ist stark vom individuellen Vorwissen abhängig.
+
+Trotzdem ist es sinnvoll, sich allgemeine Leitregeln
+zum Code-Lesen bewusst zu machen.
+
+* Die Regel zum erste Code-Lesen: +
+  *Sich einen Überblick verschaffen*.
+
+* Die Regel zum zweiten Code-Lesen: +
+  *Klären wie vorhandener Code
+   für die eigene Aufgabe wiederverwendet
+   werden kann.*
+
 
 ****
 
+
+.Das erste Code-Lesen
+****
+Das erste Lesen verschafft sich einen Überblick.::
++
+Beim ersten Lesen hat man die folgenden Fragen
+im Hinterkopf:
++
+*  Was macht ein Code-Abschnitt?
+*  Wofür wird der Code-Abschnitt gebraucht?
+// empty line above below is required
+
+Das Lesen von Funktionen::
+Code-Abschnitte, die Funktionen darstellen, lassen sich in einen Kopf-Bereich
+und einen Definitionsbereich oder Körperbereich (_engl._ body)
+unterteilen.
++
+Die zuverlässigsten Antworten auf die Frage
+_Was macht ein Code-Abschnitt?_
+bekommt man aus dem Kopf eines Code-Abschnittes.
+
+* aus den Namen
+* aus einem Kommentar zum Kopf
+* aus den übergebenen Parameter
+
++
+Wenn der Kopfbereich eines Elementes nicht genung
+information liefert, kann es hilfreich sein den Body
+zu studieren.
+****
+
+.Der (fehlerhafte) Code
+****
 .Die (fehlerhaften) Code-Bruchstücke für ein Qt-Applikation _Sortieralgorithmen_
 [source, cpp, linenums]
 ----
 include::exercise-sheet--given-source-code.cpp[tags=**]
 ----
+
 .Allgemeines Vorwissen
-****
+*****
 
 .{cpp} erlaubt die Benutzung von globalen Funktionen.
 [NOTE]
@@ -27,7 +84,7 @@ Variablen existieren.
 
 .Java ist eine Sprache, in der weder globale Methoden noch globale Variablen existieren.
 [NOTE]
-=====
+====
 Siehe dazu auch:
 
 * Java lernen in abgeschlossenen Lerneinheiten.
@@ -40,8 +97,8 @@ Statische Elemente einer Klasse.
 Die statischen Elemente einer Klasse,
 also Klassenvariablen und Klassenmethoden,
 übernehmen in Java die Aufgaben von globalen Elementen.
-=====
-
+====
+*****
 ****
 
 
@@ -73,43 +130,14 @@ void bubbleSort(datentyp *feld, int anz)
 ----
 Außer diesen globalen Elementen enthält der Code die Funktion
 `FrmMain::on_btnBubbleSort_clicked()`.
+
+
+Für jedes dieser Bruchstücke müssen wir uns
+die Fragen zur ersten Lese-Runde beantworten:
+
+*  Was macht der Code-Abschnitt?
+*  Wofür wird der Code-Abschnitt gebraucht?
 ****
-
-
-
-
-.Das Modellieren von globalen ELementen in UML
-****
-UML unterstützt die Modellierung von  globalen Elementen nur indirekt.
-
-Reine OO-Sprachen kennen keine globalen Elemente.
-UML wurde für reine OO-Sprachen entwickelt.
-Daher bietet UML keine direkte Modellierung
-für globale Elemente an.
-
-Indirekt lassen sich globale Elemente modellieren.
-Zwei Modellierungsarten für globale Elemente sind:
-
-* Die Modellierung von globalen Elementtypen in UML als Objekttypen
-
-* Die Modellierung globaler Elemente in UML als Klassenelemente
-
-****
-
-
-.Die Modellierung von globalen Elementtypen in UML als Objekttypen
-****
-.Die Modellierung von globalen Elementtypen in UML als Objekttypen
-image::skills/uml/generated/UML__Denote_each_global_elementtyp_as_an_objecttyp.png[]
-****
-
-.Die Modellierung globaler Elemente in UML als Klassenelemente
-****
-.Die Modellierung der globalen Elementen in UML als Klassenelemente
-image::skills/uml/generated/UML__Denote_global_elements_as_static_class_members.png[]
-****
-
-
 
 .`FrmMain::on_btnBubbleSort_clicked()`: Funktion eines Namensraum oder Instanzmethode einer Klasse?
 ****
@@ -123,7 +151,7 @@ die gekapselt wird durch den Namensraum `FrmMain`.
 
 
 . Sie gehört zur Klasse `FrmMain` und
- ist eine Instanzmethode der Klasse
+ist eine Instanzmethode der Klasse
 +
 Der verwendete Stilguide erfordert:
 +
@@ -132,8 +160,8 @@ Der verwendete Stilguide erfordert:
 class FrmMain : public QMainWindow
 ----
 +
-Mit anderen Worten: Die Klasse `FrmMain` leitet sich vin der Klasse `QMainWindow` ab;
-repräsentiert als das Hauptfenster der Anwendung.
+Mit anderen Worten: Die Klasse `FrmMain` leitet sich von der Klasse `QMainWindow` ab.
+Die Klasse `FrmMain` repräsentiert als das Hauptfenster der Anwendung.
 +
 Somit gilt:
 +
@@ -163,6 +191,40 @@ einer Instanz- oder einer Klassenmethode.
 ====
 ****
 
+
+
+.Das Modellieren von globalen ELementen in UML
+****
+UML unterstützt die Modellierung von  globalen Elementen nur indirekt.
+
+Reine OO-Sprachen kennen keine globalen Elemente.
+UML wurde für reine OO-Sprachen entwickelt.
+Daher bietet UML keine direkte Modellierung
+für globale Elemente an.
+
+Indirekt lassen sich globale Elemente modellieren.
+Zwei Modellierungsarten für globale Elemente sind:
+
+* Die Modellierung von globalen Elementtypen in UML als Objekttypen
+
+* Die Modellierung globaler Elemente in UML als Klassenelemente
+
+
+.Die Modellierung von globalen Elementtypen in UML als Objekttypen
+*****
+.Die Modellierung von globalen Elementtypen in UML als Objekttypen
+image::skills/uml/generated/UML__Denote_each_global_elementtyp_as_an_objecttyp.png[]
+*****
+
+.Die Modellierung globaler Elemente in UML als Klassenelemente
+*****
+.Die Modellierung der globalen Elementen in UML als Klassenelemente
+image::skills/uml/generated/UML__Denote_global_elements_as_static_class_members.png[]
+*****
+****
+
+
+
 .Der Namespace
 ****
 
@@ -189,7 +251,10 @@ gleichen Namens in allen anderen Namespaces unterschieden,
 und es vereinfacht außerdem das Verständnis Ihres Codes
 für andere.
 ____
+****
 
+.Reine OO-Sprachen kennen keine stand-alone Elemente
+****
 Weil {cpp} die Deklarattion von Namespaces ermöglicht,
 gibt es in {cpp} nicht nur globale Element, sondern
 auch sogenannte allein-stehenden Elemente
@@ -202,12 +267,353 @@ _Reine OO-Sprachen kennen keine stand-alone Elemente._
 Denn in einer reinen OO-Sprache werden alle Elemente
 durch Klassen gekapselt.
 
+In {cpp} sind stand-alone Elemente
+möglich, die nicht durch eine Klasse gekaspelt werden:
+Variablen, Konstanten oder auch Funktionen.
+Wohl aber können in {cpp} solche stand-alone Elemente
+durch Namensräume gekapselt werden.
+
 Wir passen unser Diagramm dieser Erkenntnis an.
 
 
 
-UML unterstützt die Modellierung von globalen Elementen nur indirekt.
+.UML unterstützt die Modellierung von stand-alone Elementen nur indirekt.
+image::skills/uml/generated/UML__Denote_each_standalone_elementtyp_as_an_objecttyp.png[]
 ****
+
+
+
+.Das zweiten Code-Lesen
+****
+Klären, wie vorhandene Code-Bruchstücke für die eigene Aufgabe wiederverwendet werden können.::
+Das erste Code-Lesen bot uns eine erste Orientierung: Was wird an Code angeboten,
+Wofür wurde geschrieben?
++
+Jetzt beim zweiten Code-Lesen stehen ehr _wie_-Fragen im Vordergrund:
+_Wie können wir den angeboten Code Nutzen für die aktuelle Aufgabe?_
++
+Es ist klug, gleich eine zweite Frage zu stellen:
+_Wie können wir den angebotenen Code in keinen Schritten so umschreiben
+(__engl.__ to refactor), dass der Code nicht nur der aktuellen Aufgabe dient,
+sondern auch jederzeit für eine zukünftige Aufgabe hilfreich ist?_
++
+Damit ergibt sich eine weitere Regel für zweite Code-Lesen:
+
+Klären, welche Code-Bruchstücke über die aktuelle Aufgabe hinaus nützlich sind.::
+Damit verbunden ist eine allgemeine Frage:
+_Wie können wir vorhandenen Code eine Qualität geben, dass seine Wiederverwendung
+in zukünftigen Projekten sehr wahrscheinlich ist?_
++
+.Ein Gedanke zum Thema Software und Qualität
+[quote, 'James Fulford in a link:https://medium.com/javascript-in-plain-english/the-worst-part-of-angular-1db587453fee[blog]']
+____
+Quality isn’t getting a computer to do what you want efficiently —though that can be a challenge at times. No, writing code for computers to read is easy; writing code for humans to read is hard.
+The hard part isn’t writing, it’s reading. As code increases, reading complexity grows O(2^n) — exponentially.
+____
++
+Das Zitat vertritt die Meinung, dass die Qualität von Software davon abhängt,
+wie gut lesbar der Code für die Menschen ist, die ihnen weiterentwickeln wollen.
+So kommen wir zum Rüstzeug für diese Aufgabe.
+
+Rüstzeug für das zweite Lesen::
+Das Rüstzeug für gute Lesbarkeit von Code kennen:::
+Ein gut lesbarer Text hat eine gute inhaltliche Gliederung. +
+So braucht auch gut lesbare Software eine klare Gliederung.
++
+Ein Mittel, um die Lesebarkeit von Code zu erhöhen,
+ist die Benutzung von Namensräumen (_engl._ namespace).
+Namensräume machen die Gliederung von Code transparent.
+Je mehr Code geschrieben wird, um so wichtiger wird für seine Qualität
+eine nachvollziehbare Gliederung.
++
+Beispielhaft werden hier ein paar Gliederungsgedanken
+zum vorhandenen Code vorgestellt, denn gliedern erhöht die Lesbarkeit
+und damit die Qualität von Software. Das ist der Kern von dem
+Zitat von James Fulford:
++
+.Die Kernaussage von James Fulford zum Thema software und Qualität
+[quote, 'James Fulford in a link:https://medium.com/javascript-in-plain-english/the-worst-part-of-angular-1db587453fee[blog]']
+____
+Qualität ist nicht einen Computer dazu zu bringen,
+auf eine effiziente Weise das zu tun,
+was du möchtest. ... Das Schreiben von Code,
+der durch den Computer gelesen werden kann,
+ist der leichte Teil des Codierens.
+
+Der schwierigere Teil ist, so zu codieren,
+dass jeder andere Entwickler sich leicht in den Code einlesen kann.
+____
++
+Die klare und transparente Kaspelung von Code ist ein Stilmittel,
+um Code zu gliedern und damit die Lesbarkeit des Codes zu erhöhen.
++
+Ein Mittel zur Kapselung von Code sind *Namensräume* (_engl._ namespace).
++
+Namensräume sind ein wichtiger Zwischenschritt, wenn Code nicht nur durch
+_Copy and Paste_ wiederverwendet werden soll.
++
+Deutlich macht dies auch eine Regel aus den _{cpp} Core Guidelines_,
+auf die wir im nächsten Abschnitt eingehen.
+
+
+
+.Ideen zur Benutzung und Gliederung der gegebenen Code-Fragmente.
+image::skills/uml/generated/UML__Denote_the_second_code_reading.png[]
+
+
+Rüstzeug für guten {cpp}-Code: Die _{cpp} Core Guidelines_ kennen ::
+Die _{cpp} Core Guidelines_ sind ein guter Ratgeber.
++
+Ein Ratgeber ist immer dann hilfreich, wenn man einen Rat sucht. +
+Wer einen Ratgeber durchliest, ohne im Hinterkopf einen bestimmten Rat zu suchen,
+kann auch erleben, dass das Durchlesen eines Ratgebers recht verstörend sein kann.
++
+Deshalb wollen wir erstmal klären, zu welchen Themen wir Rat suchen.
+
+Welchen Rat gibt es zu globalen Variablen in den {cpp} Core Guidelines?:::
++
+Die link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#i2-avoid-non-const-global-variables[Regel *I2* der Core Guidelines] lautet:
+_Vermeide nicht konstante globale Variablen_.
++
+Die Regel gehört zur Hauptabschnitt
+link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#i-interfaces[I: Interfaces].
+Als Erläuterung zu Interfaces (_dt._ Schnittstellen) heißt es in den Core-Guidelines:
++
+[quote, 'link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#i-interfaces[I: Interfaces]']
+____
+Gute _Interfaces_ zu haben, ist wohl der wichtiges einzele Grundbaustein für eine gute
+Organisation des Codes. Gute Interfaces zeichnen sich dadurch aus, dass sie
+leicht zu verstehen sind,
+so gestaltet sind, dass sie ihrer effizienten Benutzung einfach ist und einladend,
+weil sie nicht fehleranfällig sind, die Schreiben von Tests unterstützen.
+____
+
+
+.Hilfestellung zur App-Entwicklung:
+[NOTE]
+====
+* Welche nicht konstanten globalen Variablen enthalten die Code-Bruchstücke?
+* Wie können diese Variablen deklariert werden, ohne _globale_ Variablen zu sein?
+====
+
+
+* Wie können diese Variablen deklariert werden, ohne _globale_ Variablen zu sein?
+
+Äußert sich die Core Guideline zur Nützlichkeit von Namensräumen?:::
+****
+
+
+.Hilfestellung zum Lesen der Core Guidelines
+****
+* Jede  Regel gehört zu einem bestimmten Hauptabschnitt
+  (_engl._ major section) der Guidelinesn
+  oder zu einem Unterabschnitt (_engl._ subsection).
++
+Jeder Hauptabschnitt und Unterabschnitt wird zum vereinfachten Referenzieren
+auch eine Buchstabenkombination zugeordnet. Diese Zuordung wird in der
+link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#insec-major-sections[Regel *In.sec* der Core Guidelines]
+erläutert.
++
+.Das Referenzierungsnummer von Core Guideline Regel starten mit Buchstabenkombinationen
+[NOTE]
+Die Referenznumber der link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#insec-major-sections[Regel *In.sec*] ::
+macht deutlich:
+Die Regel gehört zum Abschnitt *In: Introduction*, +
+der  gemäß der
+link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#insec-major-sections[Regel *In.sec*].
+einer der Hauptabschnitte ist.
+
+* Jeder Regel der Core Guidelines folgt einer festen Struktur.
++
+Die Strukturelmente einer Regel beschreibt die
+link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#instruct-the-structure-of-this-document[Regel *In.struct*]
+beschrieben. Die Strukturelemente, die eine Regel enthalten kann sind:
+
+.Die Strukturelemente einer {cpp} Core Guideline Regel
+*****
+Jede Regel (Leitlinie, Vorschlag) setzt sich aus verschiedenen Abschnitten zusammen.
+
+* Die Regel selbst
+* Eine Referenznumber
++
+Eine Referenznumber folgt diesem Aufbau:
++
+----
+<Kürzel für Hauptabschnitt>.<Regelnummer>
+<Kürzel für Nebenabschnitt>.<Kürzel für Regelthema>
+----
++
+[quote, 'link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#instruct-the-structure-of-this-document[Regel *In.struct*]' ]
+____
+Since the major sections are not inherently ordered,
+we use letters as the first part of a rule reference “number”.
+We leave gaps in the numbering to minimize “disruption” when we add or remove rules.
+____
+* _Argumente bzw. Gründe_ für die Regel (_engl._ reasons / rationales) werden geben,
+  damit die Regel für den Programmierer besser einsichtig ist.
+
+* Um die Verständlichkeit einer Regel zu verbessern,
+  werden _Beispiele_ geben.  Die Beispiel können
+  negativ oder positiv Beispiele sein.
+
+* Bei Regeln, die dazu aufrufen etwas zu vermeiden, werden _Alternativen_ aufgezeigt.
+
+* Regel müssen nicht an sich allgemeingültig sein,
+  deshalb werden gegebenenfalls _Ausnahmen_ (_engl._ exceptions) angeführt.
+
+* Die  _Durchsetzung einer Regel_ (_engl._ enforcement) vereinfacht sich,
+  wenn es Mechanismen gibt die ihre Umsetzung überprüfen.
++
+Solche Überprüfungen können auf verschiedene Weise erreicht werden:
+Ein Code Reviewing, also durch eine Person;
+aber auch mechanistisch automatisiert durch:
+statische Analysen, den Compiler oder Laufzeitüberprüfungen.
+Mehr dazu in der link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#inforce-enforcement[Regel *In.force*]
+
+* _Verweise_ (engl. see alsos) geben Hinweise auf verwandte Themen.
+
+* _Anmerkungen_ oder _Kommentare_ (_engl._ notes / comments) enthalten
+  eine Information, die sich den bisher genannten Elementen
+  zur Klassifizierung der Information nicht zu ordnen ließen.
+
+* Das Element _Diskussion_ (_engl._ discussion) vertieft
+  typischerweise die Gründe einer Regel
+  und/oder gibt weitergehende Beispiele.
+*****
+
+
+
+.Anmerkung zur Typdefinierung: `Datentyp`
+****
+Die vorgebenenen Code-Bruchstücke geben dem Array,
+der durch den Sortieralgorithmus bearbeitet werden soll,
+den Typ `Datentyp`. Konkreter formuliert:
+Es wird nicht der Array selbst an die Funktion
+`bubbelSort` übergeben, sondern ein Pointer auf den Array.
+
+Beim ersten Lesen hatten wir die folgenden Fragen im Hinterkopf:
+
+* Was macht ein Code-Abschnitt?
+
+* Wofür wird der Code-Abschnitt gebraucht?
+
+Spätestens jetzt ist ein guter Zeitpunkt sich die folgenden Fragen
+zu beantworten:
+
+Was macht die Typendefinition `Datentyp`?::
+Sie ist eine Art Tarnung, wodurch der eigentliche Datentyp `int` verschleiert wird.
+Wofür wird diese Typdefinition `Datentyp` gebraucht?::
+Zunächst mal kann man dazu in den Code schauen:
+* Die Typdefinierung wird benutzt,
+  um eine globale Variable `origArray` zu deklarieren
+  als `datentyp*`.
++
+Das heißt `origArray` ist ein Zeiger auf einen Speicheradresse vom
+Typ `datentyp`.
+
+** Die deklarierte Variable `origArray` wird
+  in den Code-Bruchstücken lediglich in einer Zuweisung
+  in der Funktion
+  `FrmMain::on_btnBubbleSort_clicked()`
+   benutzt:
++
+[source, cpp]
+----
+include::exercise-sheet--given-source-code.cpp[tags=use-of-variable-origArray]
+----
+* Die Typdefinierung wird benutzt als Parametertyp in zwei Funktionen:
++
+[source, cpp]
+----
+include::exercise-sheet--given-source-code.cpp[tags=use-of-typdef-datentyp-as-parameter-type]
+----
++
+.Hilfestellung zur Frage: Wofür wird die Typendefinierung `datentyp` gebraucht?
+[NOTE]
+====
+* Wie verändert sich der Code dieser Funktion, wenn statt der Typendefinierung
++
+[source, cpp]
+----
+typedef int datentyp
+----
++
+die Typdefinierung
++
+[source, cpp]
+----
+typedef double datentyp
+----
+verwendet wird?
+
+Jetzt erhalten wir eine Antwort auf die Frage:
+
+_Wofür wird der Typdefinierung `datentyp` gebraucht?_::
+
+Mittels der Typdefinierung kann ein einfaches Beispiel
+für eine _generische Programmierung_ gegeben werden.
+
+Gewinne ein Verständnis zum Schlagwort _generische Programmierung_.:::
++
+Zum Beispiel durch das Durchdenken unserer obigen Frage:
++
+[quote]
+____
+Wie verändert sich der Code dieser Funktion, wenn der Typ `datentyp`
+nicht den Typen `int`, sondern den Typ `double` repräsentiert.
+____
++
+oder über die folgenden Links:
+
+** link:https://de.wikipedia.org/wiki/Generische_Programmierung[Generische_Programmierung @ de.wikipedia.org]
+** link:http://www.berti-cmm.de/de/fachinfo/generische-programmierung/definition/[Was ist generische Programmierung? @ berti-cmm.de]
+====
+
+* Die Typdefinierung wird benutzt zur Deklaration bzw Definition von Variablen
+  in Funktionen benutzt.
+
+** Für eine Deklaration in der Funktion `bubbelSort`
++
+[source, cpp]
+----
+include::exercise-sheet--given-source-code.cpp[tags=use-of-typdef-datentyp-as-variable-type-in-function-bubbleSort]
+----
++
+.Hilfestellung zur Fehlersuche in den Code-Bruchstücken
+[NOTE]
+====
+* Vergleich die Deklaration der Variable `tmp` mit ihre Benutzung im Code
+der Funktion.
+
+[source, cpp]
+----
+include::exercise-sheet--given-source-code.cpp[tags=define-algorithm-bubbleSort]
+----
+
+* Vergleiche den gezeigt Sortieralgorithmus mit seiner Kommentierung
+  als _aufsteigendes Sortieren_.
+
+====
+** Für eine Definition in der Funktion `FrmMain::on_btnBubbleSort_clicked`
++
+[source, cpp]
+----
+include::exercise-sheet--given-source-code.cpp[tags=use-of-typdef-datentyp-as-variable-type-in-function-on_btnBubbleSort_clicked]
+----
++
+.Hilfestellung zur App-Entwicklung
+[NOTE]
+====
+Hier tritt eine bisher unbekannte Variable auf `anzElemente`.
+
+* Was repräsentiert die Variable?
+* Wofür wird die Variable gebraucht?
+** Wie bekommt die Variable einen Wert?
+** Wo wird die Variable deklariert?
+====
+
+****
+
 
 
 

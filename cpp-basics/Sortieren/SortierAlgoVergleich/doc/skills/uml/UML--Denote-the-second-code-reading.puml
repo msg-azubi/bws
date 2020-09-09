@@ -1,0 +1,92 @@
+@startuml
+
+
+set namespaceSeparator ::
+
+object  Typendefinierung <<standalone>> {
+   {static} typdef int ::Datentyp
+}
+
+
+object  Variable <<standalone>> {
+    {static} ::origArray
+}
+
+object Funktion  <<standalone>> {
+    {static} ::arrayAnzeigen()
+}
+
+object Funktion  <<standalone>>  {
+    {static} ::bubbelSort()
+}
+
+
+class FrmMain <<AppWindow>> {
+    on_btnBubbleSort_clicked()
+}
+
+
+
+
+note as explainHowToReuseCodeFragements
+<b>Klären, wie vorhandene Code-Bruchstücke</b>
+<b>für die eigene Aufgabe wiederverwendet werden können</b>
+
+""Datentyp""
+    Der Typ wird in der Signatur der Methoden
+    ""arrayAnzeigen"" und ""bubbelSort"" benutzt.
+    Außerdem wird im Body von
+    ""FrmMain::on_btnBubbleSort_clicked()""
+    benutzt.
+
+    =>  Die standalone Typendefinierung bleibt global.
+
+""origArray""
+    wird lediglich im Body von ""FrmMain::on_btnBubbleSort_clicked"" benutzt,
+    ohne zuvor als Parameter übergeben zu sein.
+
+    =>  Die AppWindow Klasse ""FrmMain"" ist die top-level Klasse
+          der Anwendung.
+    =>  Statt ""origArray"" im globalen Namespace von C++ zu deklarieren
+          verwenden wir ""origArray"" als Eigenschaft der Anwendung.
+          Das heißt, wir deklarieren die Variable als private Eigenschaft
+          der Anwendung.
+
+""arrayAnzeigen()""
+    Die standalone Funktion unterstützt das Anzeigen eines Array
+    in einem ListWidget von Qt.
+
+    =>  Denkbar wäre die standalone Funktion in einen Namensraum
+          zu verschieben, der diese Aufgabe deutlich macht.
+
+          Denn diese Code-Fragment erfüllt eine allgemeine Aufgabe,
+          die bestimmt auch in anderen Qt Applikationen auftriit.
+
+          Ein Namensraum ""qtHelper"" könnte solche allgemein
+          wiederverwendbare Code-Fragmente sammeln.
+
+        Hier ein Vorschlag für einen Namensraum
+        ""qtHelper::listWidget::arrayAnzeigen()""
+
+""bubbelSort()""
+   Die standalone Funktion ist eine Implementierung eines Sortier-
+   algorithmus.
+
+   =>  Denkbar wäre die standalone Funktion in einen Namensraum
+         zu verschieben, der diese Aufgabe deutlich macht.
+
+       Hier ein Vorschlag für einen Namensraum
+               ""algorithmus::sort::bubbelSort()""
+end note
+
+
+class FrmMain <<AppWindow>> {
+    Datentyp
+    on_btnBubbleSort_clicked()
+}
+
+Typendefinierung .. explainHowToReuseCodeFragements
+Funktion .. explainHowToReuseCodeFragements
+Variable .. explainHowToReuseCodeFragements
+FrmMain  .. explainHowToReuseCodeFragements
+@enduml

@@ -1,0 +1,54 @@
+@startuml
+
+
+set namespaceSeparator ::
+
+object  Typendefinierung <<standalone>> {
+   {static} typdef int ::Datentyp
+}
+
+
+object  Variable <<standalone>> {
+    {static} ::origArray
+}
+
+object Funktion  <<standalone>> {
+    {static} ::arrayAnzeigen()
+}
+
+ object Funktion  <<standalone>>  {
+    {static} ::bubbelSort()
+}
+
+note  as explainModelingOfGlobalElements
+<b>UML unterstützt die Modellierung von </b>
+<b>standalone Elementen nur indirekt</b>
+
+Reine OO-Sprachen kennen keine standalone Elemente.
+Denn in reinen OO-Sprachen sind alle Elemente durch
+Klassen gekapselt.
+
+UML wurde für reine OO-Sprachen entwickelt.
+Daher bietet UML keine direkte Modellierung
+für standalone (_dt_ alleinstehende) Elemente an.
+
+Indirekt lassen sich standalone Elemente modellieren.
+end note
+
+
+note as explainModelingOfGlobalElementtypsAsObjects
+
+
+<b>Modellierung von standalone Elementtypen als Objekttypen</b>
+
+Indirekt lassen sich standalone Elementtyp als Objekttyp verstehen.
+
+...
+Durch die Voranstellung des Namensseparators  ""::""
+wird deutlich gemacht, dass es globale Elemente sind.
+end note
+
+Typendefinierung .. explainModelingOfGlobalElementtypsAsObjects
+Funktion .. explainModelingOfGlobalElementtypsAsObjects
+Variable .. explainModelingOfGlobalElementtypsAsObjects
+@enduml

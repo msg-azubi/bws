@@ -4,7 +4,7 @@
 
 
 object  Typendefinierung <<globale>> {
-   {static} int = Datentyp
+   {static} typedef int Datentyp
 }
 
 

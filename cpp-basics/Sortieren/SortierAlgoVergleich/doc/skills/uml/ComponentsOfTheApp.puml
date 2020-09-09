@@ -1,0 +1,47 @@
+@startuml
+
+
+package "App" {
+' comment
+'left to right direction
+'top to bottom direction
+package "MainWindow" {
+component component_Array_erzeugen [
+Array erzeugen
+]
+component component_Array_sortieren [
+Array sortieren
+]
+component_Array_erzeugen -> origArray
+origArray -> component_Array_sortieren
+}
+' end-of package MainWindow
+
+
+
+
+package "Qt Widgets" {
+' internal interfaces
+interface "UI" as I_ui_Array_erzeugen
+interface "UI" as I_ui_Array_sortieren
+
+'Turn  1 - 2  to : (2 top) - (1 bottom)
+left to right direction
+I_ui_Array_erzeugen -- [<<Widgets>> \n Array erzeugen]
+I_ui_Array_sortieren -- [<<Widgets>> \n Array sortieren]
+
+}
+' end-of Qt Widgets
+
+}
+'end of App
+' external to App
+interface "Laufzeit des \nAlgorithmus" as I_elapsed_time
+
+cloud {
+I_elapsed_time --- [Manuelle \n Auswertung]
+component_Array_sortieren ---> I_elapsed_time
+}
+' end-of external to App
+@enduml
+
