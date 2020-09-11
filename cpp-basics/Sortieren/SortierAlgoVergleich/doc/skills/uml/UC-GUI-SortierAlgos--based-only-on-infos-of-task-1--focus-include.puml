@@ -6,7 +6,7 @@ package Frame {
 
 usecase "Sortieralgorithmus \n ""Bubbelsort"" \n ausführen" as UC_BubbelSort
 
-usecase include_at_UC_BubbelSort as "
+usecase include_at_UC_BubbelSort as"
 Per ""WaitCursor"" dem Nutzer die Ausführung ankündigen.
 ----
 tempArray benutzen
@@ -17,6 +17,7 @@ tempArray anzeigen in Widget ""lwKopie"".
 ----
 Per ""ArrowCursor"" dem Nutzer die Beendigung der Ausführung ankündigen.
 "
+
 UC_BubbelSort .> include_at_UC_BubbelSort : <<include>>
 frameUser .. UC_BubbelSort
 left to right direction

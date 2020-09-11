@@ -13,7 +13,7 @@ semantische Fehler::
 verstoßen nicht gegen die Syntax,
 aber bezogen auf die Bedeutung,
 also die Semantik, die der Code haben soll, ergibt sich ein Fehler.
-Eine klare Tennung zwischen semantischen Fehlern
+Eine klare Trennung zwischen semantischen Fehlern
 und logischen Fehlern ist schwierig.
 
 .Das Rüstzeug für Aufgabe 1.a ist: _Die Fehlerarten von Software kennen_.
@@ -36,8 +36,8 @@ Verstoß gegen grammatikalische Regel der Programmiersprache.
 Programm wird nicht ausgeführt.
 semantische Fehler::
 stell ein korrektes Sprachkonstrukt dar,
-sind aber im Kontext der Aufgabe falsch.
-Z. B eine falsche Deklaration.
+sind aber im Kontext der Aufgabe falsch. +
+Beispiel: eine falsche Deklaration.
 logische Fehler::
 falscher Problemlösungsansatz oder
 der Algorithmus ist nicht korrekt

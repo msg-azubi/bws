@@ -1,5 +1,8 @@
 .Überblick über die zu entwickelnden Komponenten
 ****
 .Die wesentlichen Schnittstellen (_engl._ interfaces) der Anwendung
-image::skills/uml/generated/ComponentsOfTheApp.png[]
+[plantuml]
+----
+include::../skills/uml/ComponentsOfTheApp.puml[]
+----
 ****

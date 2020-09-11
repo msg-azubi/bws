@@ -215,13 +215,19 @@ Zwei Modellierungsarten für globale Elemente sind:
 .Die Modellierung von globalen Elementtypen in UML als Objekttypen
 ****
 .Die Modellierung von globalen Elementtypen in UML als Objekttypen
-image::../skills/uml/generated/UML__Denote_each_global_elementtyp_as_an_objecttyp.png[]
+[plantuml]
+----
+include::../skills/uml/UML--Denote-each-global-elementtyp-as-an-objecttyp.puml[]
+----
 ****
 
 .Die Modellierung globaler Elemente in UML als Klassenelemente
 ****
 .Die Modellierung der globalen Elementen in UML als Klassenelemente
-image::../skills/uml/generated/UML__Denote_global_elements_as_static_class_members.png[]
+[plantuml]
+----
+include::../skills/uml/UML--Denote-global-elements-as-static-class-members.puml[]
+----
 ****
 
 
@@ -280,7 +286,10 @@ Wir passen unser Diagramm dieser Erkenntnis an.
 
 
 .UML unterstützt die Modellierung von stand-alone Elementen nur indirekt.
-image::../skills/uml/generated/UML__Denote_each_standalone_elementtyp_as_an_objecttyp.png[]
+[plantuml]
+----
+include::../skills/uml/UML--Denote-each-standalone-elementtyp-as-an-objecttyp.puml[]
+----
 ****
 
 
@@ -360,7 +369,10 @@ auf die wir im nächsten Abschnitt eingehen.
 
 
 .Ideen zur Benutzung und Gliederung der gegebenen Code-Fragmente.
-image::../skills/uml/generated/UML__Denote_the_second_code_reading.png[]
+[plantuml]
+----
+include::../skills/uml/UML--Denote-the-second-code-reading.puml[]
+----
 ****
 
 .Rüstzeug für guten {cpp}-Code

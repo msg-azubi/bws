@@ -24,6 +24,8 @@ Bilder speichern.
 
 [NOTE]
 ====
+* Die in diesem Dokument verwendeten UML Diagramm liegen als PlantUML Quelldateien
+im Ordner `doc/skills/uml`.
 
 ====
 ****
@@ -59,9 +61,10 @@ Hier ein erstes Ergebnis eines Reengineering Versuches.
 Alle Information im  _Use Case_ Diagramm stammt aus
 dem Code der Aufgabe 1.
 +
-image::skills/uml/generated/UC_GUI_SortierAlgos__based_only_on_infos_of_task_1.png[]
-
-
+[plantuml]
+----
+include::../skills/uml/UC-GUI-SortierAlgos--based-only-on-infos-of-task-1.puml[]
+----
 Reengineering (Stufe 2): Der Bedienablauf :::
 Die Aufgabe 2 zeigt eine graphische Benutzeroberfläche
 (_engl._ graphical user interface).
@@ -71,8 +74,9 @@ Im wesentlichem unterstützt die Oberfläche
 zwei Arbeitsschritt: Das Erzeugen eines Array und das anschließend Anzeigen
 einer sortierten Version dieses Arrays.
 +
-image::skills/uml/generated/UC_GUI_SortierAlgos__overview.png[]
-
+----
+include::../skills/uml/UC-GUI-SortierAlgos--overview.puml[]
+----
 
 Reengineering (Stufe 3): Das _Use Case_ Diagramm :::
 Die Benutzeroberfläche gruppiert und rahmt zwei Interaktionen ein:
@@ -81,7 +85,10 @@ Der Nutzer (_engl._ user) kann direkt diese Aktionen konfigurieren und starten.
 Im UML Diagramm _Use Case_ wird diese deutlich durch die Verwendung eines
 Pfeils zwischen Akteur und Use Case.
 +
-image::skills/uml/generated/UC_GUI_SortierAlgos__based_on_infos_of_task_1_and_2.png[]
+[plantuml]
+----
+include::../skills/uml/UC-GUI-SortierAlgos--based-on-infos-of-task-1-and-2.puml[]
+----
 +
 Außerdem zeigt das _Use Case_ Diagramm eine _include_ Beziehung.
 +
@@ -98,13 +105,15 @@ Das deutsche _etwas einschließen_ oder _etwas mit enthalten_
 entspricht dem englischen Verb _to include_.
 
 .Die _include_ Beziehung in Use Case Diagrammen
-image::skills/uml/generated/UC_GUI_SortierAlgos__based_only_on_infos_of_task_1__focus_include.png[]
-
+[plantuml]
+----
+include::../skills/uml/UC-GUI-SortierAlgos--based-only-on-infos-of-task-1--focus-include.puml[]
+----
 Übrigens werden in diesem Diagramm einige Textformatierungen,
-die von PlantUML unterstützt werden, benutzt. Mehr dayu
+die von PlantUML unterstützt werden, benutzt.
 
 Mehr im Exkurs *Die Ascii Syntax von PlantUML für einen __Use Case__*.
-Der Exkurs zeigt wie der Ascii Code aussieht die hier gezeigten Use Cases.
+Der Exkurs zeigt, wie der Ascii Code aussieht die hier gezeigten Use Cases.
 
 .Der Exkurse zur *Ascii Syntax von PlantUML* befinden sich unter folgendem Pfad:
 ----
@@ -133,7 +142,7 @@ Mit einer _extend_ Beziehung werden Optionen beschrieben.
 Optionen sind Funktionalitäten, die -- je nach Situation -- genutzt werden
 oder nicht genutzt werden. Im _Use Case_ Diagramm
 werden die Optionen einer Funktionalität etwas abgesondert
-von der Kernfunktionaliät dargestellt. Die Zugehörigkeit
+von der Kernfunktionalität dargestellt. Die Zugehörigkeit
 einer Option zur Kernfunktionalität wird per Pfeil visualisiert.
 Das Deutsche _etwas absondern_ oder _etwas ausgrenzen_
 entspricht dem englischen _to exclude_.
