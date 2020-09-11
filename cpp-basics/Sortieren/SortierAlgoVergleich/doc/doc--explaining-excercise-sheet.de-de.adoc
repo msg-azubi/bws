@@ -1,0 +1,29 @@
+:excercise-sheet--title: Sortieralgorithmen
+
+= Hintgrundinformation zu Übungsblatt:  {excercise-sheet--title}
+
+== Einführung
+
+include::includes/exercise-sheet--intro.de-de.adoc[]
+
+== Aufgabe 1
+
+include::includes/exercise-sheet--task-01.de-de.adoc[]
+
+=== Hinweise zu Aufgabe 1 a
+
+include::includes/exercise-sheet--hints-to-task-01-a.de-de.adoc[]
+
+=== Hinweise zu Aufgabe 1 b
+
+include::includes/exercise-sheet--hints-to-task-01-b.de-de.adoc[]
+
+=== Hinweise zu Aufgabe 1 c
+
+include::includes/exercise-sheet--hints-to-task-01-c.de-de.adoc[]
+
+== Aufgabe 2
+
+=== Hinweise zu Aufgabe 2
+
+include::includes/exercise-sheet--hints-to-task-02--hint-01.de-de.adoc[]

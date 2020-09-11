@@ -1,4 +1,4 @@
-.Hinweis zur Aufgabe 1 a) des Übungsblattes _Sortieralgorithmen_
+.Hinweise zur Aufgabe 1 a) des Übungsblattes _Sortieralgorithmen_
 ****
 * Es ist zu erwarten, dass drei Fehlerarten im Code zu finden sind: Syntax-Fehler, semantische Fehler und logische Fehler.
 +

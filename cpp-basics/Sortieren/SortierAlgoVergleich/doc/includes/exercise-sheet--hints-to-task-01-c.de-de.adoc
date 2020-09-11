@@ -8,6 +8,7 @@ von denen über die Aufgabe a) bekannt ist,
 dass dieser Code Fehler enthält.
 +
 Unser wichtiges Rüstzeug heißt:
+
 * Code lesen; sich seinen Informationsgehalt erschließen;
   die Fehler entdecken.
 
@@ -68,9 +69,10 @@ zu studieren.
 ----
 include::exercise-sheet--given-source-code.cpp[tags=**]
 ----
+****
 
 .Allgemeines Vorwissen
-*****
+****
 
 .{cpp} erlaubt die Benutzung von globalen Funktionen.
 [NOTE]
@@ -98,8 +100,8 @@ Die statischen Elemente einer Klasse,
 also Klassenvariablen und Klassenmethoden,
 übernehmen in Java die Aufgaben von globalen Elementen.
 ====
-*****
 ****
+
 
 
 .Die Erkenntnisse beim ersten Code lesen
@@ -208,20 +210,20 @@ Zwei Modellierungsarten für globale Elemente sind:
 * Die Modellierung von globalen Elementtypen in UML als Objekttypen
 
 * Die Modellierung globaler Elemente in UML als Klassenelemente
-
+****
 
 .Die Modellierung von globalen Elementtypen in UML als Objekttypen
-*****
+****
 .Die Modellierung von globalen Elementtypen in UML als Objekttypen
-image::skills/uml/generated/UML__Denote_each_global_elementtyp_as_an_objecttyp.png[]
-*****
+image::../skills/uml/generated/UML__Denote_each_global_elementtyp_as_an_objecttyp.png[]
+****
 
 .Die Modellierung globaler Elemente in UML als Klassenelemente
-*****
-.Die Modellierung der globalen Elementen in UML als Klassenelemente
-image::skills/uml/generated/UML__Denote_global_elements_as_static_class_members.png[]
-*****
 ****
+.Die Modellierung der globalen Elementen in UML als Klassenelemente
+image::../skills/uml/generated/UML__Denote_global_elements_as_static_class_members.png[]
+****
+
 
 
 
@@ -278,7 +280,7 @@ Wir passen unser Diagramm dieser Erkenntnis an.
 
 
 .UML unterstützt die Modellierung von stand-alone Elementen nur indirekt.
-image::skills/uml/generated/UML__Denote_each_standalone_elementtyp_as_an_objecttyp.png[]
+image::../skills/uml/generated/UML__Denote_each_standalone_elementtyp_as_an_objecttyp.png[]
 ****
 
 
@@ -358,9 +360,11 @@ auf die wir im nächsten Abschnitt eingehen.
 
 
 .Ideen zur Benutzung und Gliederung der gegebenen Code-Fragmente.
-image::skills/uml/generated/UML__Denote_the_second_code_reading.png[]
+image::../skills/uml/generated/UML__Denote_the_second_code_reading.png[]
+****
 
-
+.Rüstzeug für guten {cpp}-Code
+****
 Rüstzeug für guten {cpp}-Code: Die _{cpp} Core Guidelines_ kennen ::
 Die _{cpp} Core Guidelines_ sind ein guter Ratgeber.
 +
@@ -370,7 +374,8 @@ kann auch erleben, dass das Durchlesen eines Ratgebers recht verstörend sein ka
 +
 Deshalb wollen wir erstmal klären, zu welchen Themen wir Rat suchen.
 
-Welchen Rat gibt es zu globalen Variablen in den {cpp} Core Guidelines?:::
+Welchen Rat geben die Core Guidelines zur _Code Orgainisation_?:::
+Welchen Rat gibt es zu globalen Variablen in den {cpp} Core Guidelines?::::
 +
 Die link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#i2-avoid-non-const-global-variables[Regel *I2* der Core Guidelines] lautet:
 _Vermeide nicht konstante globale Variablen_.
@@ -387,8 +392,7 @@ leicht zu verstehen sind,
 so gestaltet sind, dass sie ihrer effizienten Benutzung einfach ist und einladend,
 weil sie nicht fehleranfällig sind, die Schreiben von Tests unterstützen.
 ____
-
-
++
 .Hilfestellung zur App-Entwicklung:
 [NOTE]
 ====
@@ -396,15 +400,26 @@ ____
 * Wie können diese Variablen deklariert werden, ohne _globale_ Variablen zu sein?
 ====
 
+Wie äußert sich die Core Guideline zur Nützlichkeit von Namensräumen?::::
 
-* Wie können diese Variablen deklariert werden, ohne _globale_ Variablen zu sein?
+In der
+link:https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rnr-lots-of-files[Regel NR.4]  aus dem Unterabschnitt
+https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#nr-non-rules-and-myths[NR: Non rules and myths]
+geht es darum, dass es nicht sinnvoll ist für jede Klasse ein Quelldatei (_engl._ source file)
+zu eröffnen. In der _Alternative_ der Regel heißt es:
++
+[quote, 'link:https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rnr-lots-of-files[Regel NR.4: Do not insist on placing each class declaration in its own source file]' ]
+____
 
-Äußert sich die Core Guideline zur Nützlichkeit von Namensräumen?:::
-****
+Benutze als Alternative _Namespaces_.
 
+Denn Namespaces enthalten logisch
+zusammenhängende (_engl._ cohesive)
+Sätze von Klassen und Funktionen.
+____
 
 .Hilfestellung zum Lesen der Core Guidelines
-****
+*****
 * Jede  Regel gehört zu einem bestimmten Hauptabschnitt
   (_engl._ major section) der Guidelinesn
   oder zu einem Unterabschnitt (_engl._ subsection).
@@ -430,7 +445,7 @@ link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#instruct-the-s
 beschrieben. Die Strukturelemente, die eine Regel enthalten kann sind:
 
 .Die Strukturelemente einer {cpp} Core Guideline Regel
-*****
+******
 Jede Regel (Leitlinie, Vorschlag) setzt sich aus verschiedenen Abschnitten zusammen.
 
 * Die Regel selbst
@@ -440,6 +455,7 @@ Eine Referenznumber folgt diesem Aufbau:
 +
 ----
 <Kürzel für Hauptabschnitt>.<Regelnummer>
+
 <Kürzel für Nebenabschnitt>.<Kürzel für Regelthema>
 ----
 +
@@ -479,8 +495,9 @@ Mehr dazu in der link:https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelin
 * Das Element _Diskussion_ (_engl._ discussion) vertieft
   typischerweise die Gründe einer Regel
   und/oder gibt weitergehende Beispiele.
+******
 *****
-
+****
 
 
 .Anmerkung zur Typdefinierung: `Datentyp`
@@ -611,7 +628,6 @@ Hier tritt eine bisher unbekannte Variable auf `anzElemente`.
 ** Wie bekommt die Variable einen Wert?
 ** Wo wird die Variable deklariert?
 ====
-
 ****
 
 

@@ -14,13 +14,3 @@ gut erläutert.
 ****
 
 
-Aufgabe 1 (Kat. B): ::
-[loweralpha]
-. Finden Sie alle Fehler im Code mit Nennung der Zeilennummer und Fehlerart und
-machen Sie  einen Korrekturvorschlag.
-
-
-. Zeichnen Sie ein UML-Anwendungsfalldiagramm, oft auch als Use Case Diagramm bezeichnet.
-
-. Setzen Sie den Code in ein Qt-Projekt um.
-+
