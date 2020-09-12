@@ -74,6 +74,7 @@ Im wesentlichem unterstützt die Oberfläche
 zwei Arbeitsschritt: Das Erzeugen eines Array und das anschließend Anzeigen
 einer sortierten Version dieses Arrays.
 +
+[plantuml]
 ----
 include::../skills/uml/UC-GUI-SortierAlgos--overview.puml[]
 ----

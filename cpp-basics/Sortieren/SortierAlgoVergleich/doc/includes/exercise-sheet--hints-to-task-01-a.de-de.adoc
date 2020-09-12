@@ -29,8 +29,8 @@ logische Fehler (plus statt minus, Schleifenfehler, …)
 Eine etwas andere Liste von Fehlerarten wird
 im  Kapitel _Finden und Vermeiden von Software-Fehlern_
 der Vorlesung _Einführung in die Informatik (TU Freiberg, WS 2087/08)_
-gegeben (Details in link:www.informatik.tu-freiberg.de/lehre/pflicht/EinInf/ws07/Informatik17-Softwarefehler.pdf[Vorlesungsfolien]). +
-
+gegeben (Details in link:http://www.informatik.tu-freiberg.de/lehre/pflicht/EinInf/ws07/Informatik17-Softwarefehler.pdf[Vorlesungsfolien]).
++
 Syntax-Fehler::
 Verstoß gegen grammatikalische Regel der Programmiersprache.
 Programm wird nicht ausgeführt.

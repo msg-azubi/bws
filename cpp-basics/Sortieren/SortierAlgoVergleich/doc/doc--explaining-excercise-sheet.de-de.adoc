@@ -1,6 +1,24 @@
-:excercise-sheet--title: Sortieralgorithmen
+// product
+:product-category: Explained Exercise Sheet:
+:product-category_short: EES:
+:exercise-sheet-title: Sortieralgorithmen
+:exercise-sheet-title_short: SortAlgo
 
-= Hintgrundinformation zu Übungsblatt:  {excercise-sheet--title}
+:product-name: {product-categor} {exercise-sheet-title}
+:product-name_short: Explained ES: {exercise-sheet-title_short}
+:product-name_abbr: {product-category_short} {exercise-sheet-title_short}
+:product-version: 0.7
+// end-of Produuct
+
+// localisation
+:lang: de
+ifdef::lang[include::includes/attributes-lang-{lang}.adoc[]]
+// end-of localisation
+
+:toc:
+
+
+= Hintergrundinformation zu Übungsblatt:  {exercise-sheet-title}
 
 == Einführung
 

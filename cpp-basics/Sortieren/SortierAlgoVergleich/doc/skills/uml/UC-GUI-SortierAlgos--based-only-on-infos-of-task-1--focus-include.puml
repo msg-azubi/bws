@@ -6,8 +6,8 @@ package Frame {
 
 usecase "Sortieralgorithmus \n ""Bubbelsort"" \n ausführen" as UC_BubbelSort
 
-usecase include_at_UC_BubbelSort as"
-Per ""WaitCursor"" dem Nutzer die Ausführung ankündigen.
+usecase include_at_UC_BubbelSort as "
+Per <i>WaitCursor</i> dem Nutzer die Ausführung ankündigen.
 ----
 tempArray benutzen
 ----

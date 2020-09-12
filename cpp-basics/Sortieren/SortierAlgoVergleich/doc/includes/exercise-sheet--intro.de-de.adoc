@@ -1,10 +1,11 @@
 .Übungsblatt zu Thema Sortieralgorithmen
 ****
 INFORMATION::
-Dieses Übungsblatt besteht aus zwei Aufgaben. Die Aufgabe 1 liefert einen Teil Rüstzeug für die Aufgabe 2.
+Dieses Übungsblatt besteht aus zwei Aufgaben. Dabei gilt: +
+_Die Aufgabe 1 ist vor der Aufgabe 2 zu erledigen._
 +
-Mit anderen Worten: Die Aufgabe 1 vermittelt einen Teil des Wissens und Könnens,
-das Voraussetzung ist, um die Aufgabe 2 gut zu bearbeiten.
+Mit anderen Worten:::
+Die Aufgabe 1 vermittelt einen Teil des Wissens und Könnens, das Voraussetzung ist, um die Aufgabe 2 gut bearbeiten zu können.
 
 Wortschatz:::
 Merke dir folgenden Begriff
