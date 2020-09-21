@@ -10,8 +10,6 @@ QT_END_NAMESPACE
 
 typedef int datentyp; //Datentyp des Arrays
 
-
-
 class FrmMain : public QMainWindow
 {
     Q_OBJECT
@@ -27,12 +25,16 @@ private slots:
 
     void on_btnSelectionSort_clicked();
 
-
     void on_btnArrayErzeugen_clicked();
+
+    void pflichtfeldHatSichVeraendert();
 
 private:
     Ui::FrmMain *ui;
     // Type      Variablename
     datentyp* originArray;
+
+    void deaktiviereButtons();
+
 };
 #endif // FRMMAIN_H
