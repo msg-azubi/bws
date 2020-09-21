@@ -1,0 +1,13 @@
+.Die Aufgabe 1 des Übungsblattes _{exercise-sheet-title}_
+****
+Aufgabe 2 (Kat. C): ::
+Entwickle ein Programm, um Sortieralgorithmen miteinander bzgl. ihrer Rechenzeiten zu vergleichen. ::
+Sortiert wird stets nur eine Kopie (!) des vorher erzeugten Originalarrays.
+Daher sind die Schaltflächen erst anklickbar, wenn der ursprüngliche (_engl._ original) Array erzeugt wurde. +
+Die Rechenzeit ist in Millisekunden (ms) anzuzeigen.
+
+.Hier ein Beispiel wie ein erster Entwurf für die Benutzeroberfläche des Programms.
+image::images/given/a-possible-ui-for-the-app.png[]
+****
+
+

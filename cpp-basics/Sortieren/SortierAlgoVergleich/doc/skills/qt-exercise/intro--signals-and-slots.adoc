@@ -13,3 +13,38 @@ am einfachsten durch Copy&Paste.
 Versuche diese aneinandergereihten Sätze frei ins Deutsche
 zu übersetzen, so dass du ein Grundverständnis für _Signals&Slots_ hast.
 ****
+
+
+
+.Das Aktivieren eines Feldes
+****
+
+[source, cpp]
+----
+YourDialog::YourDialog(QWidget *parent)
+{
+    connect(ui->lineEdit1, SIGNAL(textChanged()), this, SLOT(checkLineEdits()));
+    connect(ui->lineEdit2, SIGNAL(textChanged()), this, SLOT(checkLineEdits()));
+    connect(ui->lineEdit3, SIGNAL(textChanged()), this, SLOT(checkLineEdits()));
+    connect(ui->lineEdit4, SIGNAL(textChanged()), this, SLOT(checkLineEdits()));
+}
+
+void YourDialog::checkLineEdits()
+{
+    bool ok = !ui->lineEdit1->text().isEmpty()
+    && !ui->lineEdit2->text().isEmpty()
+    && !ui->lineEdit3->text().isEmpty()
+    && !ui->lineEdit4->text().isEmpty();
+
+    ui->okButton->setEnabled(ok);
+}
+----
+
+****
+
+
+.Nützliche Links
+****
+link:https://samdutton.wordpress.com/2008/10/03/debugging-signals-and-slots-in-qt/[20 ways to debug Qt signals and slots]
+
+****

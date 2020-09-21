@@ -1,0 +1,36 @@
+==== Die Aufgabenstellung übersetzt in ein Komponentendiagramm von UML
+
+
+.Überblick über die zu entwickelnden Komponenten
+****
+.Die wesentlichen Schnittstellen (_engl._ interfaces) der Anwendung
+[plantuml]
+----
+include::../skills/uml/ComponentsOfTheApp.puml[]
+----
+****
+
+
+==== Die Aufgabestellung übersetzt in ein Aktivitätsdiagramm von UML
+
+.Überblick über die Aktivitäten, die Benutzeroberfläche ermöglichen soll.
+****
+.Die Testdaten erstellen (_engl._ interfaces) der Anwendung
+[plantuml]
+----
+include::../skills/uml/ActivitiesSupportedByTheApp-generate-testdata.puml[]
+----
+
+
+.Überblick über die Aktivitäten, die Benutzeroberfläche ermöglichen soll.
+****
+.Die Testdaten erstellen (_engl._ interfaces) der Anwendung
+[plantuml]
+----
+include::../skills/uml/ActivitiesSupportedByTheApp-support-protocol.puml[]
+----
+
+
+****
+
+

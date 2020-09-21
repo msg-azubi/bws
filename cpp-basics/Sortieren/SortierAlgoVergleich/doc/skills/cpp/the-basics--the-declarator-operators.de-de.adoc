@@ -16,21 +16,16 @@ Daher spricht man auch von ihnen als Operatoren für die Typdeklaration.
 a|
 `T[N] a` oder `T a[N]`
 a|
-Der Name `a` steht einen Array
-von `N` Elementen  des Typs `T`. +
-Es gibt auch eine Variante diese Typdeklaratin,
-wo der Deklarationsoperator `[ ]` nicht direkt auf den T folgt,
-sondern erst auf den Namen der Variable `a`.
+In `T[N] a`  steht der Name `a` für einen Array von `N` Elementen  des Typs `T`. +
+Es gibt auch eine Variante diese Typdeklaration, nämlich `T a[N]`.
+Hier folgt der Deklarationsoperator `[ ]` nicht direkt auf den Typ `T`, sondern erst auf den Bezeichner der Variable `a`.
 
 a| `T* p`
 a| Die Verknüpfung `T*` steht für den Typ #Zeiger auf ein Objekt vom Typ ``T``#.
-   Der Begriff _Objekt_ repräsentiert hier allgemein einen Speicherbereich,
-   d. h. mehrere Speicherzellen.
-   Ein Zeiger kennt zum einen eine Speicheradresse, wo ein Wert abgelegt ist,
-   und zum anderen den Typ des Wert, nämlich `T`. Intern wird über den Typ festgelegt
-   wie viele Speicherzellen nötig sind, um das Objekt zu repräsentieren.
-   Mit anderen Worten: Der Name `p` steht für einen Zeiger auf eine Speicheradresse
-   und die Speicheradresse selbst enthält einen Wert von Typ `T`.
+   Der Begriff _Objekt_ repräsentiert hier allgemein einen Speicherbereich, d. h. mehrere Speicherzellen.
+   Ein Zeiger kennt zum einen eine Speicheradresse, wo ein Wert abgelegt ist, und zum anderen den Typ des Wertes, nämlich `T`.
+Intern wird über den Typ festgelegt, wie viele Speicherzellen nötig sind, um das Objekt zu repräsentieren.
+   Mit anderen Worten: Der Name `p` steht für einen Zeiger auf eine Speicheradresse und die Speicheradresse selbst enthält einen Wert von Typ `T`.
    Kurz: Die Deklaration `T*` deklarierte eine Zeiger (_engl._ pointer).
 
 a| `T& r`

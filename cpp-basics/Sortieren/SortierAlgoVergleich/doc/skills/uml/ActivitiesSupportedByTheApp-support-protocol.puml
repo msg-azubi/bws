@@ -1,0 +1,61 @@
+@startuml
+
+|Array erzeugen|
+start
+
+partition Required_Parameters {
+:Anzahl der Element festlegen;
+:Den größtmöglichen Wert festlegen;
+}
+
+
+if ( Sind Optionen gesetzt? ) then (nein)
+else (ja)
+  |#Cyan|Optionen auswerten \n|
+
+  partition Optional_Parmeter\num_spezifische_Testdaten\nfür_die_Vergleiche_erzeugen_zu_können {
+  if (Soll der ursprüngliche Array \n vorsortiert werden?) then (ja)
+     if (Auf welche Weise wird \n vorsortiert? ) then (aufsteigend  \n vorsortieren)
+          else (absteigend \n vorsortieren)
+     endif
+     if (Soll nur ein Teilabschnitt \n vorsortiert werden?) then (ja)
+            :Erfrage, ab welchen Wert \n vorsortiert werden soll;
+
+     else(Den gesamten Array \n vorsortieren )
+     endif
+  else (nein)
+  endif
+  }
+endif
+|Array erzeugen|
+:Erzeuge den ""origArray"";
+|#Blue|Sortieralgorithmus \n laufenlassen |
+partition Wert_für_das\nProtokoll_ermitteln {
+:Laufzeit \n für ausgewählten \n Sortieralgorithmus \n bestimmen;
+}
+|#AntiqueWhite|Manuelle Aufgabe:\nProtokoll führen|
+partition Erstelle_Protokoll {
+:Laufzeit im Protokoll festhalten;
+note right
+Wie muss das Protokoll
+aussehen, damit die einzelnen
+Sortieralgorithmen aussagekräftig
+miteinander verglichen werden können?
+end note
+
+if (Überlege was du aktuell vergleichst!!\nHast Du genug Information für das Protokoll?) then (nein)
+  :Was benötigt Dein Protokoll \n noch an Information?;
+  note right
+  * Sind alle Testdaten erzeugt
+      worden für den aktuell betrachteten
+      Sortieralgorithmus?
+  * Welcher Sortieralgorithmus
+      ist vollständig protokolliert?
+  * Für welchen Sortieralgorithmus
+        fehlen bestimmte Testdaten?
+  end note
+else
+endif
+}
+stop
+@enduml

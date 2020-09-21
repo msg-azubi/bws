@@ -3,8 +3,11 @@
 
 typedef int datentyp;  //
 
+typedef unsigned int uint;
+
+
 namespace SortierAlgo {
-    void bubbelSort();
+    void bubbleSort(datentyp* feld, int anz);
 }
 
 

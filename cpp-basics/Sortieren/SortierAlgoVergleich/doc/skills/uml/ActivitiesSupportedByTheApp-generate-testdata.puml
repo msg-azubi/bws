@@ -1,0 +1,26 @@
+@startuml
+|originArray \n initialisieren|
+start
+:Anzahl der Element festlegen;
+:Den größtmöglichen Wert festlegen;
+if ( Werden Optionen verwendet? ) then (nein)
+else (ja)
+  |#Cyan|Optionen auswerten|
+  if (Soll der ursprüngliche Array \n vorsortiert werden?) then (nein)
+  else (ja)
+     if (Auf welche Weise wird \n vorsortiert? ) then (aufsteigend)
+     else (absteigend)
+     endif
+     if (Soll nur ein Teilabschnitt \n vorsortiert werden?) then (ja)
+       :Erfrage, ab welchen Wert vorsortiert werden soll;
+        note right
+            Ist dies die Bedeutung von:
+            <i>erster Wert geändert auf</i>?
+        end note
+     endif
+  endif
+endif
+|originArray \n als Testdaten \n aufbereiten. \n\n Mit den Testdaten \n wird anschließend \n das Laufzeitverhalten \n eines Algorithmus \n bestimmt.|
+:Erzeuge den \nkonfigurierten Array \nals Testdaten \nfür einen Sortieralgorithmus-Lauf;
+stop
+@enduml

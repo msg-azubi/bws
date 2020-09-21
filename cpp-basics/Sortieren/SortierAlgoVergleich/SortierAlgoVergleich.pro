@@ -18,11 +18,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     frmmain.cpp \
-    sortieralgo.cpp
+    sortieralgo.cpp \
+    uihelper.cpp
 
 HEADERS += \
     frmmain.h \
-    sortieralgo.h
+    global.h \
+    sortieralgo.h \
+    uihelper.h
 
 FORMS += \
     frmmain.ui

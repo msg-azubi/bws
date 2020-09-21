@@ -2,11 +2,11 @@
 ****
 * Es ist zu erwarten, dass drei Fehlerarten im Code zu finden sind: Syntax-Fehler, semantische Fehler und logische Fehler.
 +
-Syntax-Fehler verstoßen nicht gegen die Sprachregeln
+Syntax-Fehler verstoßen gegen die Sprachregeln
 und werden auch durch den Compiler einer Sprache erkannt.
 Moderne IDEs finden Syntax-Fehler bereits während des Editierens.
 +
-Fehler, die bei der Durchsicht von Code schwieriger zu finden sind,
+Fehler, die bei der Durchsicht von Code schwieriger zu finden sind
 als Syntax-Fehler, sind:
 
 semantische Fehler::
@@ -15,9 +15,10 @@ aber bezogen auf die Bedeutung,
 also die Semantik, die der Code haben soll, ergibt sich ein Fehler.
 Eine klare Trennung zwischen semantischen Fehlern
 und logischen Fehlern ist schwierig.
+****
 
 .Das Rüstzeug für Aufgabe 1.a ist: _Die Fehlerarten von Software kennen_.
-*****
+****
 Auf link:https://de.wikipedia.org/wiki/Programmfehler#Klassifizierung_von_Fehlern[de.wikipedia.org]
 werden zum Beispiel diese fünf Fehlerarten genannt: +
 Lexikalische Fehler (unbekannter Bezug),
@@ -30,7 +31,7 @@ Eine etwas andere Liste von Fehlerarten wird
 im  Kapitel _Finden und Vermeiden von Software-Fehlern_
 der Vorlesung _Einführung in die Informatik (TU Freiberg, WS 2087/08)_
 gegeben (Details in link:http://www.informatik.tu-freiberg.de/lehre/pflicht/EinInf/ws07/Informatik17-Softwarefehler.pdf[Vorlesungsfolien]).
-+
+
 Syntax-Fehler::
 Verstoß gegen grammatikalische Regel der Programmiersprache.
 Programm wird nicht ausgeführt.
@@ -49,16 +50,16 @@ Fehler bei Anforderungsdefinition;
 beruhend auf Missverständnissen zw. Anwender und Nutzer
 Bedienfehler::
 unübersichtliches Bedienungskonzept.
-*****
+****
 
 
 .Hinweise zum Code Reading in Aufgabe 1.a.
-*****
+****
 
 * Die Zeile 1 deklariert einen neuen Typ `datentyp`,
 Zeile 3 nutzt den neuen Datentyp, um eine Variable, `origArray`, zu deklarieren.
 +
-Von welchen Typ ist die deklarierte Variable?::
+Von welchen Typ ist die deklarierte Variable `origArray`?::
 Allgemeine Rüstzeug zu Typen in {cpp} liefert diese Datei:
 +
 ----
@@ -166,7 +167,6 @@ um die Variable `origArray` zu deklarieren.
 Beschreibe die Aufgabe dieser Methode.::
 
 // end-of
-*****
-
-// end-of
 ****
+
+

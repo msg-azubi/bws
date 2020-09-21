@@ -15,6 +15,13 @@
 ifdef::lang[include::includes/attributes-lang-{lang}.adoc[]]
 // end-of localisation
 
+// imagesdir:
+//    the includes load images from `./images/`
+//    which is a subdir to the `includes` directory
+// In other words:
+//    Each include command prefixes the image path
+//    by the value of `imagesdir`
+:imagesdir: ./includes/
 :toc:
 
 
@@ -42,6 +49,14 @@ include::includes/exercise-sheet--hints-to-task-01-c.de-de.adoc[]
 
 == Aufgabe 2
 
+include::includes/exercise-sheet--task-02.de-de.adoc[]
+
+
 === Hinweise zu Aufgabe 2
 
-include::includes/exercise-sheet--hints-to-task-02--hint-01.de-de.adoc[]
+include::includes/exercise-sheet--hints-to-task-02.de-de.adoc[]
+
+
+
+
+
