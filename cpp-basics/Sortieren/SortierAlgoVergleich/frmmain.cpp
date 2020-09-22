@@ -70,6 +70,7 @@ void FrmMain::changedPflichtfeld()
      bool ok =     !edtAnzElemente.isEmpty()
                 && (valueAnzElemente > 0)
                 && (valueAnzElemente <  std::numeric_limits<unsigned short>::max() )
+                && !ui->edtGroessteZufallszahl->text().isEmpty()
                 && (valueGroessteZufallszahl > 0 )
                 && (valueGroessteZufallszahl < std::numeric_limits<unsigned short>::max()  )    ;
      ui->btnArrayErzeugen->setEnabled(ok);
