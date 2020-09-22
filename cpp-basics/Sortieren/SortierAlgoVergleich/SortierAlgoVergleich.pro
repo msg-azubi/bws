@@ -28,6 +28,7 @@ HEADERS += \
     uihelper.h
 
 FORMS += \
+    form-Testdatensatz-konfigurieren.ui \
     frmmain.ui
 
 # Default rules for deployment.

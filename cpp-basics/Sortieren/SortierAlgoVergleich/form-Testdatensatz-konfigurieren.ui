@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>426</width>
+    <height>733</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>401</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Testdatensatz konfigurieren</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>350</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Datensatzgröße festlegen</string>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="text">
+         <string>12345</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Anzahl der Elemente</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>350</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Datensatzinhalt festlegen</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>311</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Wertebereich der Elemente</string>
+     </property>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="text">
+          <string>12345</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>größter Elementwert</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>321</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Aufbereitung des Datensatzes</string>
+     </property>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>281</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>301</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Vorsortierung konfiguieren</string>
+      </property>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>271</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>271</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Vorsortiert wird ab dem Elementwert</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>600</y>
+      <width>351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Testdatensatz speichern</string>
+    </property>
+   </widget>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>pushButton</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
