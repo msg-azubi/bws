@@ -1,0 +1,13 @@
+.Qt unterstützt das Design der Benutzeroberfläche mit _Qt Designer_
+****
+
+Ein Bestandteil der Entsicklungsumgebung für Qt ist _Qt Designer_. Das Programm ermöglicht es per Drag-und-Drop eine Benutzeroberfläche zusammenzusetzen.
+Der englische Begriff für Benutzeroberfläche ist _user interface_. Auch im Deutsch wird gerne für die Benutzeroberfläche das Kürzel _UI_ verwendet und dabei englisch ausgesprochen  als "ju:ai".
+
+
+Eine UI kann für das Hauptfenster (_engl._ main window) der Anwendung entwickelt werden oder lediglich für einen Fensterausschnitt.
+Beim Arbeiten mit Qt Designer ist diese Unterscheidung sehr nützlich.
+
+Das Hauptfenster einer Anwendung unterscheidet sich von einem Fensterauschnitt vor allem durch den Rahmen (_engl._ frame).
+Ein logischer Fensterausschnitt enthält Informationen, die sich eindeutig einem (Geschäfts-) Anwendungsfall  zuordnen lassen (_engl_ business use case). Beim Design einer Anwendung nennt man solchen logischen Fensterausschnitt auch Formular (_engl._ form).
+****

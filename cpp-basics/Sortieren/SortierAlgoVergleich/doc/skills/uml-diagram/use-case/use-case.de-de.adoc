@@ -1,0 +1,27 @@
+.Das Anwendungsfall Diagramm
+****
+Das Anwendungsfalldiagramm wird im Englischen als _use case diagram_ bezeichnet.
+
+Erläuterung::
+Ein System wird entwickelt für ein oder mehrere Anwendungsfälle. +
+Das System wird von Akteuren benutzt. Die Akteure arbeiten mit dem System, sind damit nicht ein Teil des Systems.
+Ein Akteur ist eine externe Einheit, die mit dem System interagiert. Die externe Einheit kann eine Person sein, eine Organisation oder ein anderes System. +
+Die Akteure und das System tauschen für bestimmte Anwendungsfälle Informationen untereinander aus.
+
+Beispiel::
+Ein System _Klausuren verwalten_ hat die Lehrer als Akteure, aber auch eine allgemeine Schulverwaltungssoftware kann mit dem System Informationen austauschen.
+Das System kann so gestaltet sein, dass einer Rolle in verschiedenen Ausprägungen unterschiedliche Funktionalität angeboten wird. Zum Beispielsweise kann in einem Anwendungsfall _Klausuren ansehen_ das Ergebnis unterschiedlich auswahlen für eine spezifische Lehrerrolle. Je nachdem, ob der Akteur ein _Klassenlehrer_ oder ein _Fachlehrer_ ist, sind alle Klausuren einsehbar, oder aber nur die eines Faches.
+
+
+
+Diagrammbeschreibung::
+Für die Akteure werden Stichmännchen gezeichnet. Meist wird zu dem Stichmännchen ein Rollenname hinzugefügt.
+Zwischen Akteuren kann eine _Generalisierungsbeziehung_ bestehen.
+
+Beispiel:: Ein System _Klausuren verwalten_ wird von Personen benutzt, die in ihrem Alltag die Rolle eines Lehrers einnehmen. Manchmal kann es nötig sein, eine Rolle spezifischer zu beschreiben. Die Rolle _Lehrer_ wird spezifischer, wenn vom _Klassenlehrer_ und vom _Fachlehrer_ gesprochen wird.
+ Beispielsweise könnten Fachlehrer nur die Berechtigung haben, die Klausuren ihres Faches einzusehen. Ein Klassenlehrer kann hingegen die Berechtigung haben, alle Klausuren der Klasse einzusehen. Das wäre ein Beispiel für das Rollenkonzept für Berechtigungen.
++
+Die Generalisierungbeziehung wird durch einen Pfeil mit Dreiecksspitze, das Pfeilende liegt bei spezifischen Rolle, die Pfeilspitze zeigt auf die generalisierte (oder allgemeinere) Rolle.
+****
+
+

@@ -1,0 +1,104 @@
+= UI-Komponente
+
+.Die UI eines Systems ist immer zerlegbar in die UIs von Teilaufgaben.
+****
+Eine Benutzeroberfläche (_engl._ user interface) ist die Schnittstelle zwischen dem Benutzer und dem System.
+Typischerweise wird ein System nicht für einen Anwendungsfall entwickelt, sondern für mehrere.
+
+Um eine gute Benutzeroberfläche erstellen zu können, ist es wichtig, die eine großen Aufgabe, die das System beschreibt,
+zum Beispiel _Klausuren verwalten_, in Teilaufgaben zerlegt wird.
+
+Typischerweise werden kleinere Teilaufgaben zu einer größeren Teilaufgabe zusammengefasst. Ähnliches passiert auch bei der Benutzeroberfläche: Die UIs mehrerer kleineren Teilaufgaben werden zu einer größeren Teilaufgabe zusammengesetzt.
+Die UIs dieser größeren Teilaufgabe werden zur Benutzeroberfläche des Systems miteinander verdrahte.
+
+[IMPORTANT]
+====
+Erst wenn man die Aufgabe eines Systems in Teilaufgaben zerlegt hat und verstanden hat, wie diese Teilaufgaben zusammenwirken, kann mit dem UI-Design begonnen werden.
+====
+
+Die UI eines Systems ist immer zerlegbar in einzelne UI-Komponenten. UI-Komponenten sind nicht immer von gleicher Wertigkeit. Das heißt, es gibt verschiedene Typen von Komponenten.
+****
+
+.Verschiedene Typen von UI-Komponenten
+****
+Der englische Titel dieses Abschnittes wäre:
+_Types of UI-Components_ und die Typenbezeichnungen wäre:
+
+. Presentational Components
+. Container Components
+. Layout Components
+
+
+[NOTE]
+====
+Gehe auf die Dokumentationsseite eines UI-Frameworks und ordne die angebotenen UI-Komponenten diesen Typen zu.
+
+Links zu UI-Frameworks
+
+* Das  link:https://doc.qt.io/qt-5/[Qt Framework]
++
+Betrachte die link:https://doc.qt.io/qt-5/gallery.html[Qt Widget Gallery] und diskutiere, von welchen Typ die gezeigten Qt Widgets sind.
++
+Verschaffe dir einen Überblick über die Information auf der
+ link:https://doc.qt.io/qt-5/qtwidgets-index.html[Einstiegsseite zu den Qt Widgets] in der _Qt Dokumentation_.
+
+** Layout-Komponenten in Qt
++
+Verschaffe dir einen Überblick über die Informationen auf der _Qt Dokumentationsseiten_:
+link:https://doc.qt.io/qt-5/qtwidgets-tutorials-widgets-windowlayout-example.html[Widgets Tutorial - Using Layouts] und link:https://doc.qt.io/qt-5/qtwidgets-tutorials-widgets-nestedlayouts-example.html[Widgets Tutorial - Nested Layouts]
+====
+
+****
+.Internationalisierung
+****
+Um einer Anwendung einen großen Benutzerkreis zu ermöglichen, ist es wichtig, sich zum Beispiel darüber Gedanken zu machen wie eine Applikation mehrsprachig entwickelt und an lokale Gegebenheiten angepasst werden kann.
+
+[quote, 'https://doc.qt.io/qt-5/qtlinguist-index.html[Qt Linguist]']
+____
+Durch die Internationalisierung und die Lokalisierung einer Anwendung kann ein größerer Kundenkreis für eine Anwendung gewonnen werden. Dafür ist  nötig:
+
+. Die Anwendung in weiterer Sprachen zu veröffentlichen.
+. Die regionalen Gepflogenheiten von der Anwendung beachtet werden.
+. Die technischen Gegebenheiten des Zielmarktes berücksichtigt werden.
+
+Internationalisierung der Anwendung::
+Wenn ein  UI Framework die Internationalisierung (_engl._ internationalization) einer Applikation unterstützt, dann kann eine Anwendung an verschiedene Sprachen und regionale Herausforderungen angepasst werden, ohne dass dabei neuen Code entwickeln werden muss.
+
+Die Lokalisierung ::
+Bei der Internationalisierung einer Anwendung für eine bestimmte Region,  xsind nicht nur die Landessprachen yu beachten, sondern auch Landesgepflogenheiten wie: anderes Datumsformat, anderes Zeitformat, oder anderes Zahlenformat. Die  Anpassungen einer internationalisierbaren Anwendung an eine bestimmte Region wird als Lokalisierungen (_engl._ localisation) bezeichnet.
+____
+
+
+* Das _Qt Framework_ bietet mit https://doc.qt.io/qt-5/qtlinguist-index.html[Qt Linguist] eine Reihe von Werkzeugen an, die die Internationalisierung einer Anwendung unterstützen.
++
+Einen sehr praktischen Einstieg in das Thema bietet
+die _Qt Dokumentationsseite_ link:https://doc.qt.io/qt-5/qtlinguist-hellotr-example.html[Hello tr() Example].
+
+* Die _Qt Dokumentationsseite_ link:https://doc.qt.io/qt-5/qtexamples.html[_All Qt Examples_] listet auch Beispiele zum link:https://doc.qt.io/qt-5/qtexamples.html#qt-linguist-manual[Qt Linguist Manual]. Das Manual infomiert über die Werkzeuge, durch die ist es möglich ist, eine Qt-Anwendung an verschiedene lokale Sprachen anzupassen.
+
+* Siehe auch link:https://doc.qt.io/qt-5/internationalization.html[Internationalization with Qt]
+****
+
+.Eine Grundverständnis zu Qt aufbauen
+****
+Dazu ist es sehr hilfreich die Links aus Abschnitt
+https://doc.qt.io/qt-5/widgets-tutorial.html#simple-widget-examples[Simple Widget Examples]
+von _Qt Dokumentationsseite_
+link:https://doc.qt.io/qt-5/widgets-tutorial.html[Qt Widget Tutorial]
+durchgelesen zu haben.
+****
+
+
+.Information zu "`models and views`" in Qt
+****
+Information zur Benutzung von  "`models and views`" im Qt-Framework befinden sich auf der _Qt Dokumentationsseite_ link:https://doc.qt.io/qt-5/model-view-programming.html[Model/View Programming overview].
+
+Außerdem gibt es einen Beispielprojekt. Mehr dazu auf der  _Qt Dokumentationsseite_ link:https://doc.qt.io/qt-5/examples-itemviews.html[Item Views Examples].
+****
+
+
+
+****
+
+link:https://doc.qt.io/qt-5/qtwidgets-tutorials-widgets-childwidget-example.html[Widgets Tutorial - Child Widgets]
+****
