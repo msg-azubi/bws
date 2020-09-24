@@ -1,22 +1,64 @@
-<ui version="4.0" >
- <author></author>
- <comment></comment>
- <exportmacro></exportmacro>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>Form</class>
- <widget class="QWidget" name="Form" >
-  <property name="geometry" >
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>700</width>
+    <height>450</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>671</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <row>
+    <property name="text">
+     <string>z 01</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>z 02</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>Anzahl</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Max-Wert</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>vorsortiert?</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sortierungsart</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>ab Wert</string>
+    </property>
+   </column>
+  </widget>
  </widget>
- <pixmapfunction></pixmapfunction>
+ <resources/>
  <connections/>
 </ui>
-

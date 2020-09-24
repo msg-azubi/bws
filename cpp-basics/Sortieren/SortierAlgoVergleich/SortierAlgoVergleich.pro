@@ -28,8 +28,9 @@ HEADERS += \
     uihelper.h
 
 FORMS += \
-    form-Testdatensatz-konfigurieren.ui \
-    frmmain.ui
+    frmmain.ui \
+    testdaten_listen_form.ui \
+    testdatensatz_konfigurieren_form.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
