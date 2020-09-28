@@ -1,0 +1,19 @@
+== Die _User Story_ zu "`klausur verwalten`" Projekt
+
+ToDo	
+
+Das ist ein *sehr schönes* Projekt!
+
+In einer Klausurverwaltung , man kann Klausur mit Fach und Datum eintragen, und kann Klausuren mit Noten eingeben.
+Zu einem ausgesuchte Bereich Unterrichtfächer Erfassen, Ändern, Löschen und zum erfasster Fächer den Durchschnitt Berechnen. 
+
+wenn ein Eintragung in der Liste der Klausuren ausgewählt wird, wird die Group box "Klausuren Eintragen"  deaktiviert und die Box "Klausuren Bearbeiten" aktiviert. 
+Nachdem dort eine schritt ausgeführt wurde, wird die Group box "bearbeiten Ändern/Löschen" deaktiviert und die Group box " Eintragen aktiviert und die alle Daten wird angezeigt und aktualisiert.  
+
+Alle Fächer in eine Box  zur Auswahl bei der Eingeben einer Klausur angeboten.  Eine Frei Text Eingabe ist nicht möglich und eine Doppelte Aufnahme mit der gleich Name Fächer soll unterbrechen werden.
+
+Die Überarbeitung  eines Fachnamens ergibt eine Umarbeitung in der Box und bei alle schon erfassten Klausur.  
+Ein Fach wird dann gelöscht wenn keine Klausuren  zum diesem Fach mehr gibt . 
+
+Klausuren kann nur ergreifen werden , wenn man ein Fach aus der Box Ausgezeichnet hat. 
+
